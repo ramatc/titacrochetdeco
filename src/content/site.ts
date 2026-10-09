@@ -5,7 +5,7 @@
 export const site = {
   name: "Tita Crochet",
   shortName: "TITA",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://titacrochet.com.ar",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://titacrochetdeco.vercel.app",
   locale: "es_AR",
   title: "Tita Crochet | Tejidos hechos a mano",
   description:

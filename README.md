@@ -58,5 +58,6 @@ src/
   types/        shared types
 ```
 
-Set `NEXT_PUBLIC_SITE_URL` to the production domain so canonical URLs, sitemap and
+Production: https://titacrochetdeco.vercel.app (deploys on every push to `main`).
+Set `NEXT_PUBLIC_SITE_URL` when moving to a custom domain so canonical URLs, sitemap and
 OpenGraph use it.
