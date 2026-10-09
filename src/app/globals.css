@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/*
+ * Tita Crochet — design tokens
+ * The products carry the color; the interface gives them air.
+ * ~85% neutrals. Accents: moss = action, clay = editorial marks.
+ */
+@theme {
+  /* Neutrals */
+  --color-cream: #faf7f1; /* page canvas */
+  --color-linen: #f2ede5; /* secondary surface */
+  --color-sand: #e9e2d6; /* placeholder / pressed surface */
+  --color-line: #e3dcd1; /* hairlines */
+  --color-line-strong: #c9bfb0; /* pill borders */
+  --color-ink: #26231f; /* primary text */
+  --color-ink-soft: #6f685f; /* secondary text */
+
+  /* Accents — use sparingly, never together as surfaces */
+  --color-moss: #34483a; /* primary action */
+  --color-moss-deep: #283830; /* primary action hover */
+  --color-clay: #8b4640; /* eyebrows, small editorial marks */
+  --color-mustard: #d2a72c; /* reserved, not used in UI chrome */
+
+  /* Type */
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--letter-spacing: 0.16em;
+  --text-eyebrow--line-height: 1.4;
+
+  /* Layout */
+  --container-page: 84rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-section: 6rem;
+
+  /* Motion */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-moss);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-moss);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .page-container {
+    width: 100%;
+    max-width: var(--container-page);
+    margin-inline: auto;
+    padding-inline: var(--spacing-gutter);
+  }
+
+  @media (min-width: 48rem) {
+    .page-container {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .page-container {
+      padding-inline: 3.5rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-eyebrow);
+    letter-spacing: var(--text-eyebrow--letter-spacing);
+    line-height: var(--text-eyebrow--line-height);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--color-clay);
+  }
+
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  /* Underline that grows from the left — navigation and quiet links */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 300ms var(--ease-soft);
+    padding-bottom: 2px;
+  }
+
+  .link-underline:hover,
+  .link-underline[aria-current="page"] {
+    background-size: 100% 1px;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+ * Reveal on scroll. Content stays visible when JS is disabled or the user
+ * prefers reduced motion; only then do we hide it before it enters view.
+ */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 500ms var(--ease-soft),
+      transform 500ms var(--ease-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
