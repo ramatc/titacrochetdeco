@@ -6,7 +6,11 @@ export const categories: Category[] = [
     slug: "ramos",
     name: "Ramos",
     description: "Ramos tejidos que no se marchitan: girasoles, rosas y margaritas.",
-    cover: { alt: "Ramo de girasoles y rosas tejido al crochet" },
+    cover: {
+      src: "/images/productos/ramo-girasol-y-rosa-1.jpg",
+      alt: "Ramo tejido al crochet con un girasol, una rosa roja y pampas secas, envuelto en papel kraft",
+      focus: "50% 30%",
+    },
   },
   {
     slug: "flores",

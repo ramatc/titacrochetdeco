@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { site } from "@/content/site";
 import { getCategory, getProduct, getRelatedProducts } from "@/lib/catalog";
 import { products } from "@/data/products";
@@ -30,7 +31,16 @@ export async function generateMetadata({ params }: PageProps<"/productos/[slug]"
   };
 }
 
-export default async function ProductPage({ params }: PageProps<"/productos/[slug]">) {
+// URL data is read inside <Suspense> so navigations show the layout instantly.
+export default function ProductPage({ params }: PageProps<"/productos/[slug]">) {
+  return (
+    <Suspense fallback={<div className="min-h-[80svh]" />}>
+      <ProductContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProductContent({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();

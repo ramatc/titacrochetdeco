@@ -22,6 +22,11 @@ export type Photo = {
   /** Path under /public, e.g. "/images/productos/ramo-girasoles-1.jpg". */
   src?: string;
   alt: string;
+  /**
+   * Focal point kept visible when the frame crops the photo, as a CSS
+   * object-position value, e.g. "50% 30%". Defaults to the center.
+   */
+  focus?: string;
 };
 
 /**

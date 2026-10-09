@@ -17,7 +17,10 @@ export const products: Product[] = [
     category: "ramos",
     price: 38000,
     images: [
-      { alt: "Ramo de girasoles tejidos al crochet envuelto en papel" },
+      {
+        src: "/images/productos/ramo-girasoles-1.jpg",
+        alt: "Ramo de tres girasoles tejidos al crochet con hojas verdes, envuelto en papel kraft con una tarjeta, sobre tela blanca",
+      },
       { alt: "Detalle del centro tejido de un girasol" },
       { alt: "Ramo de girasoles sostenido en la mano" },
     ],
@@ -27,7 +30,6 @@ export const products: Product[] = [
     colors: "Amarillo, marrón y verde",
     madeToOrder: true,
     featured: true,
-    cardFormat: "wide",
   },
   {
     slug: "ramo-rosas-y-margaritas",
@@ -35,7 +37,10 @@ export const products: Product[] = [
     category: "ramos",
     price: 42000,
     images: [
-      { alt: "Ramo de rosas rojas, margaritas y girasol tejidos al crochet" },
+      {
+        src: "/images/home/hero-ramo.jpg",
+        alt: "Ramo tejido al crochet con rosas rojas, margaritas blancas y un girasol, envuelto en papel sobre tela blanca",
+      },
       { alt: "Detalle de una rosa roja tejida" },
     ],
     description:
@@ -60,12 +65,33 @@ export const products: Product[] = [
     cardFormat: "square",
   },
   {
+    slug: "ramo-girasol-y-rosa",
+    name: "Ramo Girasol y Rosa",
+    category: "ramos",
+    price: 28000,
+    images: [
+      {
+        src: "/images/productos/ramo-girasol-y-rosa-1.jpg",
+        alt: "Ramo tejido al crochet con un girasol, una rosa roja y pampas secas, envuelto en papel kraft con tarjeta y etiqueta de Tita",
+      },
+    ],
+    description:
+      "Un girasol y una rosa tejidos, acompañados de pampas secas y envueltos en papel kraft. Incluye tarjeta para dedicar.",
+    dimensions: "45 cm de alto aprox.",
+    colors: "Amarillo, rojo y verde",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "girasol-sonriente",
     name: "Girasol Sonriente",
     category: "flores",
     price: 14000,
     images: [
-      { alt: "Girasol tejido con carita sonriente en el centro" },
+      {
+        src: "/images/productos/girasol-sonriente-1.jpg",
+        alt: "Girasol tejido al crochet con carita verde en el centro y hojas, envuelto en papel kraft sobre tela blanca",
+      },
       { alt: "Girasoles sonrientes listos para entregar" },
     ],
     description:
@@ -107,7 +133,10 @@ export const products: Product[] = [
     category: "amigurumis",
     price: 32000,
     images: [
-      { alt: "Amigurumi de perrito blanco sosteniendo un ramito de flores" },
+      {
+        src: "/images/productos/snoopy-con-ramito-1.jpg",
+        alt: "Amigurumi de perrito blanco con collar rojo sosteniendo un ramito de flores amarillas, sobre tela blanca",
+      },
       { alt: "Detalle de la cara del amigurumi" },
     ],
     description:
@@ -122,13 +151,18 @@ export const products: Product[] = [
     name: "Hombre Araña",
     category: "amigurumis",
     price: 30000,
-    images: [{ alt: "Amigurumi de superhéroe rojo y azul sostenido en la mano" }],
+    images: [
+      {
+        src: "/images/productos/hombre-arana-1.jpg",
+        alt: "Dos amigurumis de superhéroe rojo y azul con telarañas tejidas, sobre tela blanca",
+      },
+    ],
     description:
       "Nuestro superhéroe favorito, tejido punto por punto con todos sus detalles.",
     dimensions: "20 cm de alto aprox.",
     colors: "Rojo, azul, negro y blanco",
     madeToOrder: true,
-    featured: false,
+    featured: true,
   },
   {
     slug: "snoopy-corazon",
@@ -147,7 +181,13 @@ export const products: Product[] = [
     name: "Llavero Arañita",
     category: "deco",
     price: 9500,
-    images: [{ alt: "Llavero tejido de superhéroe colgado de un bolso" }],
+    images: [
+      {
+        src: "/images/productos/llavero-aranita-1.jpg",
+        alt: "Llavero tejido de superhéroe rojo y azul colgado de la manija de un bolso negro, junto a una telaraña tejida",
+        focus: "50% 55%",
+      },
+    ],
     description:
       "Un llavero tejido para llevar en la mochila, el bolso o las llaves.",
     dimensions: "8 cm aprox.",
@@ -161,7 +201,12 @@ export const products: Product[] = [
     name: "Combo Taza + Amigurumi",
     category: "deco",
     price: 40000,
-    images: [{ alt: "Taza blanca con dibujo junto a un amigurumi tejido" }],
+    images: [
+      {
+        src: "/images/productos/combo-taza-amigurumi-1.jpg",
+        alt: "Amigurumi azul de orejas grandes tejido al crochet junto a una taza con su cara, sobre tela blanca",
+      },
+    ],
     description:
       "Una taza personalizada junto a un amigurumi a elección. Un regalo completo, listo para entregar.",
     dimensions: "Taza estándar + amigurumi de 15 cm aprox.",
@@ -176,7 +221,11 @@ export const products: Product[] = [
     price: 45000,
     priceFrom: true,
     images: [
-      { alt: "Pareja de muñecos tejidos al crochet basados en personas reales" },
+      {
+        src: "/images/productos/munecos-personalizados-1.jpg",
+        alt: "Pareja de muñecos personalizados tejidos al crochet, con pelo castaño y ropa a medida, sostenidos en la mano",
+        focus: "50% 32%",
+      },
       { alt: "Detalle del pelo y la ropa de los muñecos personalizados" },
     ],
     description:

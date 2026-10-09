@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { getCategories, getCategory, getProducts } from "@/lib/catalog";
 import { CatalogView } from "@/components/catalog/CatalogView";
 import { CustomOrderSection } from "@/components/home/CustomOrderSection";
@@ -23,7 +24,16 @@ export async function generateMetadata({
   };
 }
 
-export default async function CategoryPage({ params }: PageProps<"/catalogo/[categoria]">) {
+// URL data is read inside <Suspense> so navigations show the layout instantly.
+export default function CategoryPage({ params }: PageProps<"/catalogo/[categoria]">) {
+  return (
+    <Suspense fallback={<div className="min-h-[80svh]" />}>
+      <CategoryContent params={params} />
+    </Suspense>
+  );
+}
+
+async function CategoryContent({ params }: { params: Promise<{ categoria: string }> }) {
   const { categoria } = await params;
   const category = getCategory(categoria);
   if (!category) notFound();

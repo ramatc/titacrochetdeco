@@ -36,6 +36,7 @@ export function Photo({
           sizes={sizes}
           priority={priority}
           className={`object-cover ${zoom}`}
+          style={photo.focus ? { objectPosition: photo.focus } : undefined}
         />
       ) : (
         <div
