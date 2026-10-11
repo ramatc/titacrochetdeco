@@ -1,8 +1,8 @@
 export type CategorySlug =
   | "ramos"
-  | "flores"
   | "amigurumis"
-  | "deco"
+  | "baby"
+  | "combos"
   | "personalizados";
 
 export type Category = {

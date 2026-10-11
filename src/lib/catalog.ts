@@ -10,8 +10,17 @@ export function getCategory(slug: string): Category | undefined {
   return categories.find((category) => category.slug === slug);
 }
 
+/** Products grouped by category, following the order defined in categories. */
+const productsByCategory = [...products].sort(
+  (a, b) =>
+    categories.findIndex((c) => c.slug === a.category) -
+    categories.findIndex((c) => c.slug === b.category),
+);
+
 export function getProducts(category?: CategorySlug): Product[] {
-  return category ? products.filter((p) => p.category === category) : products;
+  return category
+    ? productsByCategory.filter((p) => p.category === category)
+    : productsByCategory;
 }
 
 export function getFeaturedProducts(): Product[] {

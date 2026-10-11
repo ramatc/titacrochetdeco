@@ -4,8 +4,8 @@ import type { Category } from "@/types/catalog";
 export const categories: Category[] = [
   {
     slug: "ramos",
-    name: "Ramos",
-    description: "Ramos tejidos que no se marchitan: girasoles, rosas y margaritas.",
+    name: "Ramos y Flores",
+    description: "Ramos y flores tejidas que no se marchitan: girasoles, rosas, tulipanes y margaritas.",
     cover: {
       src: "/images/productos/ramo-girasol-y-rosa-1.jpg",
       alt: "Ramo tejido al crochet con un girasol, una rosa roja y pampas secas, envuelto en papel kraft",
@@ -13,27 +13,40 @@ export const categories: Category[] = [
     },
   },
   {
-    slug: "flores",
-    name: "Flores",
-    description: "Flores sueltas para regalar de a una o armar tu propio ramo.",
-    cover: { alt: "Girasol tejido al crochet" },
-  },
-  {
     slug: "amigurumis",
     name: "Amigurumis",
     description: "Muñecos y personajes tejidos a mano, punto por punto.",
-    cover: { alt: "Amigurumi tejido al crochet sostenido en la mano" },
+    cover: {
+      src: "/images/productos/snoopy-corazon-1.jpg",
+      alt: "Amigurumi de Snoopy abrazando un corazón rojo, sostenido en la mano",
+    },
   },
   {
-    slug: "deco",
-    name: "Deco",
-    description: "Pequeños objetos tejidos para la casa, la mochila o el escritorio.",
-    cover: { alt: "Llavero tejido al crochet colgando de un bolso" },
+    slug: "baby",
+    name: "Baby",
+    description: "Sonajeros y muñecos de apego tejidos con suavidad para los más chiquitos.",
+    cover: {
+      src: "/images/productos/combo-tita-1.jpg",
+      alt: "Conejito de apego tejido color crudo junto a un sonajero de conejo con aro de madera",
+    },
+  },
+  {
+    slug: "combos",
+    name: "Combos con Taza",
+    description: "Una pieza tejida junto a su taza: un regalo completo, listo para entregar.",
+    cover: {
+      src: "/images/productos/combo-taza-amigurumi-1.jpg",
+      alt: "Amigurumi de Stitch tejido al crochet junto a una taza con su cara",
+    },
   },
   {
     slug: "personalizados",
     name: "Personalizados",
     description: "Piezas a pedido: tus colores, tus personajes, tu idea.",
-    cover: { alt: "Pareja de muñecos personalizados tejidos al crochet" },
+    cover: {
+      src: "/images/productos/munecos-personalizados-1.jpg",
+      alt: "Pareja de muñecos personalizados tejidos al crochet",
+      focus: "50% 32%",
+    },
   },
 ];

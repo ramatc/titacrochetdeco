@@ -6,7 +6,7 @@ import { HowToOrder } from "@/components/home/HowToOrder";
 export const metadata: Metadata = {
   title: "Catálogo",
   description:
-    "Todas las piezas de Tita Crochet: ramos, flores, amigurumis, deco y personalizados, tejidos a mano.",
+    "Todas las piezas de Tita Crochet: ramos, flores, amigurumis, baby, combos con taza y personalizados, tejidos a mano.",
   alternates: { canonical: "/catalogo" },
 };
 
