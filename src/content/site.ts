@@ -12,11 +12,8 @@ export const site = {
     "Ramos, flores, amigurumis y objetos tejidos a mano. Conocé el catálogo de Tita Crochet y hacé tu pedido por Instagram.",
   location: "Lomas del Mirador, Buenos Aires",
   shipping: "Envíos a todo el país",
-  /**
-   * Set to the isotype path (e.g. "/brand/isotipo.svg") once the rabbit mark
-   * is exported. While null, the header shows the TITA wordmark alone.
-   */
-  isotype: null as string | null,
+  /** Rabbit isotype shown next to the wordmark. Set to null to hide it. */
+  isotype: "/brand/isotipo.png" as string | null,
 } as const;
 
 export const instagram = {
@@ -34,9 +31,10 @@ export type NavItem = { label: string; href: string };
 
 export const mainNav: NavItem[] = [
   { label: "Catálogo", href: "/catalogo" },
-  { label: "Ramos", href: "/catalogo/ramos" },
+  { label: "Ramos y Flores", href: "/catalogo/ramos" },
   { label: "Amigurumis", href: "/catalogo/amigurumis" },
-  { label: "Deco", href: "/catalogo/deco" },
+  { label: "Baby", href: "/catalogo/baby" },
+  { label: "Combos", href: "/catalogo/combos" },
   { label: "Personalizados", href: "/catalogo/personalizados" },
   { label: "Sobre Tita", href: "/#sobre-tita" },
 ];

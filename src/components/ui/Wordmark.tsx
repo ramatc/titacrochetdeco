@@ -6,7 +6,7 @@ export function Wordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       {site.isotype ? (
-        <Image src={site.isotype} alt="" width={22} height={22} className="size-5.5" />
+        <Image src={site.isotype} alt="" width={28} height={28} className="size-7" />
       ) : null}
       <span className="text-[0.95rem] font-medium tracking-[0.38em] text-ink">
         {site.shortName}

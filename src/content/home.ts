@@ -85,13 +85,14 @@ export const howToOrder = {
 export const about = {
   eyebrow: "Sobre Tita",
   title: "Detrás de cada punto hay tiempo.",
-  // EDITABLE: replace with Tita's real story. Kept intentionally generic.
   body: [
     "Tita es un pequeño taller de crochet en Lomas del Mirador. Cada pieza se teje a mano, una por vez, con hilos de algodón y mucha paciencia.",
-    "[Texto editable — contá acá la historia de Tita: cómo empezó, quién teje y qué la inspira.]",
+    "¿Y por qué Tita? Por ella: Tita es la coneja de la casa, la compañera de cada tarde de tejido. El taller lleva su nombre porque, de alguna forma, todo empezó a su lado.",
   ],
   photo: {
-    alt: "Manos tejiendo al crochet",
+    src: "/images/home/tita.jpg",
+    alt: "Tita, una coneja blanca con orejas y manchas marrones, vista desde arriba",
+    focus: "62% 50%",
   } satisfies Photo,
 };
 
