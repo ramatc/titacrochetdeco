@@ -58,7 +58,8 @@ export const customSection = {
   message:
     "¡Hola Tita! Quería consultar por una pieza personalizada. Mi idea es: ",
   photo: {
-    alt: "Muñecos personalizados tejidos al crochet a partir de una foto",
+    src: "/images/productos/vaca-personalizada-1.jpg",
+    alt: "Vaca personalizada tejida al crochet, blanca con manchas negras y cuernos marrones",
   } satisfies Photo,
 };
 

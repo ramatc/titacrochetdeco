@@ -491,6 +491,24 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "vaca-personalizada",
+    name: "Vaca Personalizada",
+    category: "personalizados",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/vaca-personalizada-1.jpg",
+        alt: "Vaca tejida blanca con manchas negras, cuernos marrones y hocico beige, sobre tela blanca",
+      },
+    ],
+    description:
+      "Una vaca tejida a pedido, con manchas, pestañas y detalles a elección.",
+    dimensions: "20 cm de alto aprox.",
+    colors: "Blanco, negro y marrón",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "camaleon-pascal",
     name: "Camaleón Pascal",
     category: "amigurumis",
