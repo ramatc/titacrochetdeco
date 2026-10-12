@@ -15,7 +15,6 @@ export const hero = {
     src: "/images/home/hero-ramo.jpg",
     alt: "Ramo tejido al crochet con rosas rojas, margaritas blancas y un girasol, envuelto en papel sobre tela blanca",
   } satisfies Photo,
-  caption: "Ramo Rosas y Margaritas — tejido a pedido",
 };
 
 export const categoriesSection = {
