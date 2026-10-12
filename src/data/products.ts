@@ -254,7 +254,10 @@ export const products: Product[] = [
         alt: "Pareja de muñecos personalizados tejidos al crochet, con pelo castaño y ropa a medida, sostenidos en la mano",
         focus: "50% 32%",
       },
-      { alt: "Detalle del pelo y la ropa de los muñecos personalizados" },
+      {
+        src: "/images/productos/munecos-personalizados-2.jpg",
+        alt: "Pareja de muñecos personalizados tejidos: él con pelo castaño enrulado y remera blanca, ella con pelo largo, buzo crudo, jean y zapatillas rojas",
+      },
     ],
     description:
       "Te tejemos en crochet: pelo, ropa y detalles a partir de una foto. El precio final depende de la complejidad.",
@@ -335,7 +338,7 @@ export const products: Product[] = [
     slug: "ramo-margarita",
     name: "Ramo Margarita",
     category: "ramos-y-flores",
-    price: 7000,
+    price: 26000,
     images: [
       {
         src: "/images/productos/ramo-margarita-1.jpg",
@@ -343,9 +346,10 @@ export const products: Product[] = [
       },
     ],
     description:
-      "Una margarita tejida para regalar de a una. Ideal también como souvenir.",
+      "Un ramito simple y delicado de margaritas blancas. Ideal como detalle o acompañando otro regalo.",
+    dimensions: "30 cm de alto aprox.",
     colors: "Blanco, amarillo y verde",
-    madeToOrder: false,
+    madeToOrder: true,
     featured: false,
     cardFormat: "square",
   },
