@@ -459,6 +459,45 @@ export const products: Product[] = [
     cardFormat: "square",
   },
   {
+    slug: "dobby",
+    name: "Dobby",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/dobby-1.jpg",
+        alt: "Amigurumi de Dobby color beige con orejas grandes y puntiagudas, sobre tela blanca",
+      },
+    ],
+    description: "Dobby tejido a mano, con sus orejas enormes y su túnica.",
+    dimensions: "15 cm de alto aprox.",
+    colors: "Beige",
+    madeToOrder: true,
+    featured: false,
+    cardFormat: "square",
+  },
+  {
+    slug: "chimuelo",
+    name: "Chimuelo",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/chimuelo-1.jpg",
+        alt: "Amigurumi de Chimuelo negro con ojos verdes y alas abiertas, de frente sobre tela blanca",
+      },
+      {
+        src: "/images/productos/chimuelo-2.jpg",
+        alt: "Amigurumi de Chimuelo negro con ojos verdes, visto de costado",
+      },
+    ],
+    description: "Chimuelo tejido en negro, con sus grandes ojos verdes y sus alas.",
+    dimensions: "16 cm de alto aprox.",
+    colors: "Negro y verde",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "mascota-personalizada",
     name: "Mascota Personalizada",
     category: "personalizados",
@@ -566,6 +605,60 @@ export const products: Product[] = [
     description:
       "Un conejito de apego y un sonajero de conejo con aro de madera. El regalo ideal para recibir a un bebé.",
     colors: "Crudo y marrón",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
+    slug: "set-piglet",
+    name: "Set Piglet",
+    category: "baby",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/set-piglet-1.jpg",
+        alt: "Peluche de Piglet rosa tejido junto a un sonajero de Piglet con aro de madera",
+      },
+      {
+        src: "/images/productos/set-piglet-2.jpg",
+        alt: "Peluche de Piglet rosa con orejas rojas, sentado sobre tela blanca",
+      },
+      {
+        src: "/images/productos/set-piglet-3.jpg",
+        alt: "Sonajero de Piglet rosa con cuello fucsia y aro de madera",
+      },
+      {
+        src: "/images/productos/set-piglet-4.jpg",
+        alt: "Peluche y sonajero de Piglet vistos en diagonal sobre tela blanca",
+      },
+    ],
+    description:
+      "Un peluche de Piglet de más de 25 cm y su sonajero con aro de madera. Un set para regalar a un bebé.",
+    dimensions: "Peluche de más de 25 cm de alto",
+    colors: "Rosa, fucsia y rojo",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
+    slug: "set-lilo-y-stitch",
+    name: "Set Lilo y Stitch",
+    category: "baby",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/set-lilo-y-stitch-1.jpg",
+        alt: "Muñeca de Lilo con vestido rojo junto a un sonajero de Stitch con aro de madera",
+      },
+      {
+        src: "/images/productos/set-lilo-y-stitch-2.jpg",
+        alt: "Muñeca de Lilo tejida con pelo negro largo, vestido rojo con flores blancas y sandalias verdes",
+      },
+      {
+        src: "/images/productos/set-lilo-y-stitch-3.jpg",
+        alt: "Sonajero de Stitch azul con orejas rosadas y aro de madera oscura",
+      },
+    ],
+    description: "Lilo tejida con su vestido rojo y un sonajero de Stitch con aro de madera.",
+    colors: "Rojo, azul, negro y beige",
     madeToOrder: true,
     featured: false,
   },
