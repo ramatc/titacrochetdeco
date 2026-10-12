@@ -33,17 +33,19 @@ export function Hero() {
           </ul>
         </div>
 
-        <figure className="-mx-(--spacing-gutter) md:mx-0 lg:col-span-7">
+        {/* Arch frame echoes the category arches below; the offset hairline adds a stitched edge. */}
+        <div className="relative mx-auto w-full max-w-[34rem] pr-3 pt-3 lg:col-span-6 lg:col-start-7 lg:mr-0">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bottom-3 left-3 rounded-t-full border border-line-strong"
+          />
           <Photo
             photo={hero.photo}
             priority
-            sizes="(min-width: 1024px) 58vw, 100vw"
-            className="aspect-[4/5] sm:aspect-[5/4] lg:aspect-[6/7] lg:max-h-[46rem] lg:w-full"
+            sizes="(min-width: 640px) 544px, 100vw"
+            className="aspect-[4/5] rounded-t-full"
           />
-          <figcaption className="mt-3 px-(--spacing-gutter) text-xs text-ink-soft md:px-0">
-            {hero.caption}
-          </figcaption>
-        </figure>
+        </div>
       </div>
     </section>
   );
