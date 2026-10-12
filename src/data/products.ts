@@ -343,18 +343,18 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    slug: "girasol-con-grogu",
-    name: "Girasol con Grogu",
+    slug: "girasol-con-shrek",
+    name: "Girasol con Shrek",
     category: "ramos-y-flores",
     price: null,
     images: [
       {
-        src: "/images/productos/girasol-con-grogu-1.jpg",
-        alt: "Girasol tejido envuelto en papel kraft con un pequeño amigurumi de Grogu y una tarjeta",
+        src: "/images/productos/girasol-con-shrek-1.jpg",
+        alt: "Girasol tejido envuelto en papel kraft con un pequeño amigurumi de Shrek y una tarjeta",
       },
     ],
     description:
-      "Un girasol tejido acompañado de un mini Grogu. Una flor con personaje incluido.",
+      "Un girasol tejido acompañado de un mini Shrek. Una flor con personaje incluido.",
     colors: "Amarillo, verde y marrón",
     madeToOrder: true,
     featured: false,
