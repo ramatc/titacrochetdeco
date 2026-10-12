@@ -49,7 +49,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es-AR" className={`${instrumentSerif.variable} ${manrope.variable}`}>
+    <html lang="es-AR" data-scroll-behavior="smooth" className={`${instrumentSerif.variable} ${manrope.variable}`}>
       <body className="flex min-h-svh flex-col">
         <Header />
         <main id="contenido" className="flex-1">
