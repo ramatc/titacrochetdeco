@@ -54,20 +54,6 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    slug: "ramo-margarita",
-    name: "Ramo Margarita",
-    category: "ramos-y-flores",
-    price: 26000,
-    images: [{ alt: "Ramo pequeño de margaritas tejidas al crochet" }],
-    description:
-      "Un ramito simple y delicado de margaritas blancas. Ideal como detalle o acompañando otro regalo.",
-    dimensions: "30 cm de alto aprox.",
-    colors: "Blanco, amarillo y verde",
-    madeToOrder: true,
-    featured: false,
-    cardFormat: "square",
-  },
-  {
     slug: "ramo-girasol-y-rosa",
     name: "Ramo Girasol y Rosa",
     category: "ramos-y-flores",
@@ -279,20 +265,6 @@ export const products: Product[] = [
     cardFormat: "wide",
   },
   {
-    slug: "ramo-a-pedido",
-    name: "Ramo a Pedido",
-    category: "personalizados",
-    price: 30000,
-    priceFrom: true,
-    images: [{ alt: "Ramo tejido armado a pedido con flores combinadas" }],
-    description:
-      "Elegí las flores, los colores y el envoltorio. Lo armamos a tu medida.",
-    dimensions: "Según la cantidad de flores",
-    colors: "A elección",
-    madeToOrder: true,
-    featured: false,
-  },
-  {
     slug: "ramo-tres-rosas",
     name: "Ramo Tres Rosas",
     category: "ramos-y-flores",
@@ -360,13 +332,13 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    slug: "margarita",
-    name: "Margarita",
+    slug: "ramo-margarita",
+    name: "Ramo Margarita",
     category: "ramos-y-flores",
     price: 7000,
     images: [
       {
-        src: "/images/productos/margarita-1.jpg",
+        src: "/images/productos/ramo-margarita-1.jpg",
         alt: "Muchas margaritas blancas tejidas, cada una envuelta en papel kraft",
       },
     ],

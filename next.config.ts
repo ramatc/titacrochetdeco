@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
       { source: "/catalogo/flores", destination: "/catalogo/ramos-y-flores", permanent: true },
       { source: "/catalogo/ramos", destination: "/catalogo/ramos-y-flores", permanent: true },
       { source: "/catalogo/deco", destination: "/catalogo/combos", permanent: true },
+      { source: "/productos/margarita", destination: "/productos/ramo-margarita", permanent: true },
+      { source: "/productos/ramo-a-pedido", destination: "/catalogo/personalizados", permanent: true },
       { source: "/productos/girasol-con-grogu", destination: "/productos/girasol-con-shrek", permanent: true },
       { source: "/productos/llavero-aranita", destination: "/productos/hombre-arana", permanent: true },
     ];

@@ -46,7 +46,7 @@ See commit history on `feat/catalog-site`.
 - [ ] Confirm bouquet prices computed from unit prices: Ramo Girasoles $33.000, Tres Rosas $37.500,
       Girasol y Rosa $23.500, Girasol y Tulipán $19.500.
 - [ ] Missing prices (show "Consultar precio"): Ramo de Messi (Messi doll price), Combo Tita,
-      Ramo Rosas y Margaritas, Ramo Girasoles Sonrientes, Ramo Margarita, Girasol con Shrek,
+      Ramo Rosas y Margaritas, Ramo Girasoles Sonrientes, Girasol con Shrek,
       combos con taza (mug price), new amigurumis and personalizados, Dobby, Chimuelo,
       Set Piglet, Set Lilo y Stitch.
 - [ ] Old placeholder prices still on pre-existing amigurumis/personalizados (Snoopy, Hombre Araña, etc.).
