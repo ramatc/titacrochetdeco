@@ -3,7 +3,7 @@ import type { Category } from "@/types/catalog";
 /** Order here defines the order in navigation and filters. */
 export const categories: Category[] = [
   {
-    slug: "ramos",
+    slug: "ramos-y-flores",
     name: "Ramos y Flores",
     description: "Ramos y flores tejidas que no se marchitan: girasoles, rosas, tulipanes y margaritas.",
     cover: {

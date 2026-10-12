@@ -52,5 +52,5 @@ See commit history on `feat/catalog-site`.
 - [ ] Decide whether tulipán and lavanda get standalone products.
 - [ ] Owner to review/rewrite the Tita story paragraph in `src/content/home.ts` (current text is a draft).
 - [ ] Owner to review product names (Muñeca con Velo, Hada Personalizada, etc.).
-- [ ] Optional: use full logo (`public/brand/logo-tita.png`) on home or OpenGraph image.
-- [ ] Optional: `/catalogo/ramos` slug could become `/catalogo/ramos-y-flores`.
+- [x] Full logo (`public/brand/logo-tita.png`) used on the OpenGraph share image (static, verified render).
+- [x] Category slug renamed to `ramos-y-flores`; `/catalogo/ramos` and `/catalogo/flores` redirect to it.

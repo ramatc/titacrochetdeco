@@ -1,5 +1,5 @@
 export type CategorySlug =
-  | "ramos"
+  | "ramos-y-flores"
   | "amigurumis"
   | "baby"
   | "combos"

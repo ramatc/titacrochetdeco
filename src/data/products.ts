@@ -14,7 +14,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasoles",
     name: "Ramo Girasoles",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 33000,
     images: [
       {
@@ -34,7 +34,7 @@ export const products: Product[] = [
   {
     slug: "ramo-rosas-y-margaritas",
     name: "Ramo Rosas y Margaritas",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 42000,
     images: [
       {
@@ -56,7 +56,7 @@ export const products: Product[] = [
   {
     slug: "ramo-margarita",
     name: "Ramo Margarita",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 26000,
     images: [{ alt: "Ramo pequeño de margaritas tejidas al crochet" }],
     description:
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasol-y-rosa",
     name: "Ramo Girasol y Rosa",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 23500,
     images: [
       {
@@ -88,7 +88,7 @@ export const products: Product[] = [
   {
     slug: "girasol-sonriente",
     name: "Flor Shrek",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 14000,
     images: [
       {
@@ -114,7 +114,7 @@ export const products: Product[] = [
   {
     slug: "flor-rapunzel-con-pascal",
     name: "Flor de Rapunzel con Pascal",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 30000,
     images: [
       {
@@ -144,7 +144,7 @@ export const products: Product[] = [
   {
     slug: "rosa-individual",
     name: "Rosa",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 12500,
     images: [
       {
@@ -295,7 +295,7 @@ export const products: Product[] = [
   {
     slug: "ramo-tres-rosas",
     name: "Ramo Tres Rosas",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 37500,
     images: [
       {
@@ -312,7 +312,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasoles-sonrientes",
     name: "Ramo Girasoles Sonrientes",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: null,
     images: [
       {
@@ -329,7 +329,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasol-y-tulipan",
     name: "Ramo Girasol y Tulipán",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 19500,
     images: [
       {
@@ -345,7 +345,7 @@ export const products: Product[] = [
   {
     slug: "girasol-con-grogu",
     name: "Girasol con Grogu",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: null,
     images: [
       {
@@ -362,7 +362,7 @@ export const products: Product[] = [
   {
     slug: "margarita",
     name: "Margarita",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: 7000,
     images: [
       {
@@ -690,7 +690,7 @@ export const products: Product[] = [
   {
     slug: "ramo-messi",
     name: "Ramo de Messi",
-    category: "ramos",
+    category: "ramos-y-flores",
     price: null,
     images: [
       {

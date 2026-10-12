@@ -31,7 +31,7 @@ export type NavItem = { label: string; href: string };
 
 export const mainNav: NavItem[] = [
   { label: "Catálogo", href: "/catalogo" },
-  { label: "Ramos y Flores", href: "/catalogo/ramos" },
+  { label: "Ramos y Flores", href: "/catalogo/ramos-y-flores" },
   { label: "Amigurumis", href: "/catalogo/amigurumis" },
   { label: "Baby", href: "/catalogo/baby" },
   { label: "Combos", href: "/catalogo/combos" },
