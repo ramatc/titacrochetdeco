@@ -1,3 +1,4 @@
+import { shrekQuote } from "@/content/quotes";
 import type { Product } from "@/types/catalog";
 
 /*
@@ -98,6 +99,7 @@ export const products: Product[] = [
     colors: "Amarillo y verde",
     madeToOrder: false,
     featured: true,
+    quote: shrekQuote,
   },
   {
     slug: "flor-rapunzel-con-pascal",
@@ -310,6 +312,7 @@ export const products: Product[] = [
     colors: "Amarillo, marrón, verde y rojo",
     madeToOrder: true,
     featured: false,
+    quote: shrekQuote,
   },
   {
     slug: "ramo-girasol-y-tulipan",
@@ -345,6 +348,7 @@ export const products: Product[] = [
     colors: "Amarillo, verde y marrón",
     madeToOrder: true,
     featured: false,
+    quote: shrekQuote,
   },
   {
     slug: "ramo-margarita",
@@ -432,6 +436,7 @@ export const products: Product[] = [
     colors: "Verde, marrón y blanco",
     madeToOrder: true,
     featured: false,
+    quote: shrekQuote,
   },
   {
     slug: "abejita",

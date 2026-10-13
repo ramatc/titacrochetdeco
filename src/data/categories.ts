@@ -37,6 +37,9 @@ export const categories: Category[] = [
         ],
       },
     ],
+    quote: {
+      text: "Te dejaré de amar cuando estas flores se marchiten.",
+    },
     productNote:
       "Las flores tejidas no se marchitan ni necesitan agua: son un regalo que queda. Cada flor se teje a mano y el ramo se arma pieza por pieza, así que podés pedirlo con otros colores o con más flores.",
     cover: {

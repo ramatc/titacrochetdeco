@@ -37,6 +37,17 @@ export function ProductInfo({ product }: { product: Product }) {
         {product.description}
       </p>
 
+      {product.quote && (
+        <figure className="mt-8 max-w-md border-l border-line pl-5">
+          <blockquote className="display text-[1.125rem] italic leading-snug text-ink">
+            “{product.quote.text}”
+          </blockquote>
+          {product.quote.author && (
+            <figcaption className="mt-2 text-sm text-ink-soft">— {product.quote.author}</figcaption>
+          )}
+        </figure>
+      )}
+
       <dl className="mt-10 border-t border-line">
         {details.map((detail) => (
           <div

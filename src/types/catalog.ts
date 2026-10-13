@@ -12,6 +12,12 @@ export type EditorialBlock = {
   paragraphs: string[];
 };
 
+export type Quote = {
+  text: string;
+  /** Rendered as the citation, e.g. "Shrek". Omit for anonymous sayings. */
+  author?: string;
+};
+
 export type Category = {
   slug: CategorySlug;
   /** Short label used in navigation, filters and breadcrumbs. */
@@ -26,6 +32,8 @@ export type Category = {
   intro: string;
   /** Editorial copy shown after the product grid. */
   editorial: EditorialBlock[];
+  /** Optional quote shown above the editorial copy. */
+  quote?: Quote;
   /** "Sobre esta pieza" note shown on every product of this category. */
   productNote: string;
   /** Representative image for navigation and share cards. */
@@ -76,5 +84,7 @@ export type Product = {
   colors?: string;
   madeToOrder: boolean;
   featured: boolean;
+  /** Optional quote shown under the description. */
+  quote?: Quote;
   cardFormat?: CardFormat;
 };

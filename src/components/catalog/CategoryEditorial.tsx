@@ -13,6 +13,17 @@ export function CategoryEditorial({ category }: { category: Category }) {
       aria-label={`Sobre ${category.name}`}
       className="page-container border-t border-line py-16 md:py-section"
     >
+      {category.quote && (
+        <figure className="mb-16 max-w-2xl">
+          <blockquote className="display text-[1.5rem] italic leading-snug text-ink md:text-[1.875rem]">
+            “{category.quote.text}”
+          </blockquote>
+          {category.quote.author && (
+            <figcaption className="mt-3 text-sm text-ink-soft">— {category.quote.author}</figcaption>
+          )}
+        </figure>
+      )}
+
       <div className="grid gap-12 md:grid-cols-3 md:gap-10">
         {category.editorial.map((block) => (
           <div key={block.title}>
