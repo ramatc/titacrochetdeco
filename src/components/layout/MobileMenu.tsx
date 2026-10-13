@@ -16,7 +16,14 @@ export function MobileMenu({ pathname }: { pathname: string }) {
       if (event.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    // Lock page scroll while the full-screen panel is open.
+    const root = document.documentElement;
+    const previousOverflow = root.style.overflow;
+    root.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      root.style.overflow = previousOverflow;
+    };
   }, [open]);
 
   const close = () => setOpen(false);
@@ -37,7 +44,7 @@ export function MobileMenu({ pathname }: { pathname: string }) {
       <div
         id={panelId}
         hidden={!open}
-        className="absolute inset-x-0 top-full border-b border-line bg-cream"
+        className="absolute inset-x-0 top-full h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain bg-cream"
       >
         <nav aria-label="Principal" className="page-container pb-8 pt-4">
           <ul className="flex flex-col">
