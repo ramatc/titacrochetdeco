@@ -4,6 +4,7 @@ import { BLOB_ROSE, BLOB_SAGE, Blob } from "@/components/ui/Blob";
 import { Heart, Sparkles } from "@/components/ui/Doodles";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /**
  * The photo sits on a soft hand-cut backdrop, marked with a couple of
@@ -14,7 +15,7 @@ export function CustomOrderSection() {
     <section
       id="personalizados"
       aria-labelledby="personalizados-title"
-      className="overflow-hidden py-16 md:py-28"
+      className="overflow-hidden py-16 md:py-section"
     >
       <div className="page-container grid items-center gap-16 md:grid-cols-12 md:gap-10">
         <Reveal className="relative px-[6%] py-[8%] md:col-span-6 md:col-start-1 lg:col-span-5 lg:col-start-2 lg:p-0">
@@ -42,13 +43,12 @@ export function CustomOrderSection() {
         </Reveal>
 
         <Reveal delay={100} className="md:col-span-6 md:col-start-7">
-          <p className="eyebrow">{customSection.eyebrow}</p>
-          <h2
+          <SectionHeading
             id="personalizados-title"
-            className="display mt-6 text-[2.75rem] text-balance lg:text-[4rem] xl:text-[4.5rem]"
-          >
-            {customSection.title}
-          </h2>
+            eyebrow={customSection.eyebrow}
+            title={customSection.title}
+            size="feature"
+          />
           <p className="mt-6 max-w-[28rem] text-base leading-[1.7] text-ink-soft md:mt-8 md:text-[1.0625rem]">
             {customSection.body}
           </p>

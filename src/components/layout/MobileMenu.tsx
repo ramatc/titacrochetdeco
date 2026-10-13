@@ -47,7 +47,7 @@ export function MobileMenu({ pathname }: { pathname: string }) {
                   href={item.href}
                   onClick={close}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  className="display block py-4 text-[1.75rem] aria-[current=page]:text-clay"
+                  className="display block py-4 text-[1.75rem] aria-[current=page]:text-clay aria-[current=page]:underline aria-[current=page]:decoration-1 aria-[current=page]:underline-offset-8"
                 >
                   {item.label}
                 </Link>

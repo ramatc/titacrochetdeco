@@ -3,20 +3,20 @@ import { categoriesSection } from "@/content/home";
 import { getCategories, getProducts } from "@/lib/catalog";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /** Arch-topped photo crops: soft and organic, without card chrome. */
 export function CategoryNavigation() {
   const categories = getCategories();
 
   return (
-    <section aria-labelledby="categorias-title" className="py-16 md:py-24">
+    <section aria-labelledby="categorias-title" className="py-16 md:py-section">
       <div className="page-container">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <h2 id="categorias-title" className="display text-[2.5rem] md:text-[3.5rem]">
-            {categoriesSection.title}
-          </h2>
-          <p className="text-[0.9375rem] text-ink-soft">{categoriesSection.lead}</p>
-        </div>
+        <SectionHeading
+          id="categorias-title"
+          title={categoriesSection.title}
+          aside={<p className="text-[0.9375rem] leading-relaxed text-ink-soft">{categoriesSection.lead}</p>}
+        />
       </div>
 
       <ul className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-(--spacing-gutter) scroll-px-(--spacing-gutter) md:mx-auto md:mt-14 md:grid md:max-w-(--container-page) md:grid-cols-5 md:gap-6 md:overflow-visible md:px-10 xl:px-14">

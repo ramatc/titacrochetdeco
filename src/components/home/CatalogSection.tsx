@@ -28,7 +28,7 @@ export function CatalogSection({ products, categories, limit = 8 }: CatalogSecti
   ];
 
   return (
-    <section id="catalogo" aria-labelledby="catalogo-title" className="page-container py-16 md:py-24">
+    <section id="catalogo" aria-labelledby="catalogo-title" className="page-container py-16 md:py-section">
       <SectionHeading id="catalogo-title" title={catalogSection.title} lead={catalogSection.lead} />
 
       <div

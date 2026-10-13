@@ -1,18 +1,16 @@
 import { howToOrder } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function HowToOrder() {
   return (
     <section
       id="como-pedir"
       aria-labelledby="como-pedir-title"
-      className="border-y border-line bg-linen py-16 md:py-24"
+      className="border-y border-line bg-linen py-16 md:py-section"
     >
       <div className="page-container">
-        <p className="eyebrow">{howToOrder.eyebrow}</p>
-        <h2 id="como-pedir-title" className="display mt-6 text-[2.5rem] md:text-[3.5rem]">
-          {howToOrder.title}
-        </h2>
+        <SectionHeading id="como-pedir-title" eyebrow={howToOrder.eyebrow} title={howToOrder.title} />
 
         <ol className="mt-12 grid gap-10 md:mt-16 md:grid-cols-3 md:gap-8">
           {howToOrder.steps.map((step, index) => (

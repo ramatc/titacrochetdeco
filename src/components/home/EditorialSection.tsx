@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { editorial } from "@/content/home";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BLOB_ROSE, BLOB_SAGE, Blob } from "@/components/ui/Blob";
 import { Flower } from "@/components/ui/Doodles";
 
@@ -13,7 +14,7 @@ export function EditorialSection() {
   return (
     <section
       aria-labelledby="editorial-title"
-      className="my-8 overflow-hidden bg-linen py-16 md:my-16 md:py-24 lg:py-28"
+      className="overflow-hidden bg-linen py-16 md:py-section"
     >
       <div className="page-container grid items-center gap-16 lg:grid-cols-12 lg:gap-10">
         <div className="relative pb-14 sm:pb-20 lg:col-span-7 lg:pb-16">
@@ -40,13 +41,12 @@ export function EditorialSection() {
         </div>
 
         <Reveal delay={80} className="lg:col-span-5 lg:pl-4 xl:pl-10">
-          <p className="eyebrow">{editorial.eyebrow}</p>
-          <h2
+          <SectionHeading
             id="editorial-title"
-            className="display mt-6 text-[3rem] md:text-[4.25rem] xl:text-[4.75rem]"
-          >
-            {editorial.title}
-          </h2>
+            eyebrow={editorial.eyebrow}
+            title={editorial.title}
+            size="feature"
+          />
           <span aria-hidden className="mt-8 block h-px w-12 bg-clay" />
           <div className="mt-8 flex max-w-[30rem] flex-col gap-5 text-base leading-[1.7] text-ink-soft md:text-[1.0625rem]">
             {editorial.body.map((paragraph) => (

@@ -10,7 +10,7 @@ const pill = "min-h-11 rounded-full px-6";
 
 const variants: Record<Variant, string> = {
   primary: `${pill} bg-moss text-cream hover:bg-moss-deep`,
-  secondary: `${pill} border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-cream`,
+  secondary: `${pill} border border-line-control text-ink hover:border-ink hover:bg-ink hover:text-cream`,
   quiet: "min-h-11 text-ink link-underline",
 };
 

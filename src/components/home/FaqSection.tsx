@@ -1,5 +1,7 @@
 import type { FaqItem } from "@/content/faq";
+import { faqSection } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /** Plain, always-visible questions and answers (no accordion, no schema). */
 export function FaqSection({ items }: { items: FaqItem[] }) {
@@ -7,17 +9,15 @@ export function FaqSection({ items }: { items: FaqItem[] }) {
     <section
       id="preguntas-frecuentes"
       aria-labelledby="preguntas-frecuentes-title"
-      className="page-container py-16 md:py-24"
+      className="page-container py-16 md:py-section"
     >
       <div className="grid gap-10 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-4">
-          <p className="eyebrow">Preguntas frecuentes</p>
-          <h2
+          <SectionHeading
             id="preguntas-frecuentes-title"
-            className="display mt-6 text-[2.5rem] md:text-[3.5rem]"
-          >
-            Antes de pedir.
-          </h2>
+            eyebrow={faqSection.eyebrow}
+            title={faqSection.title}
+          />
         </div>
 
         <Reveal className="md:col-span-7 md:col-start-6">

@@ -4,6 +4,7 @@ import { BLOB_ROSE, Blob } from "@/components/ui/Blob";
 import { Flower, Heart } from "@/components/ui/Doodles";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 /**
  * Tita's portrait in a soft hand-cut frame, taped to the page with a vine
@@ -15,17 +16,16 @@ export function AboutSection() {
     <section
       id="sobre-tita"
       aria-labelledby="sobre-tita-title"
-      className="overflow-hidden py-16 md:py-28"
+      className="overflow-hidden py-16 md:py-section"
     >
       <div className="page-container grid items-center gap-16 lg:grid-cols-12 lg:gap-10">
         <Reveal className="lg:col-span-6">
-          <p className="eyebrow">{about.eyebrow}</p>
-          <h2
+          <SectionHeading
             id="sobre-tita-title"
-            className="display mt-6 max-w-xl text-[2.75rem] text-balance lg:text-[4rem] xl:text-[4.5rem]"
-          >
-            {about.title}
-          </h2>
+            eyebrow={about.eyebrow}
+            title={about.title}
+            size="feature"
+          />
           <div className="mt-6 flex max-w-[30rem] flex-col gap-5 text-base leading-[1.7] text-ink-soft md:mt-8 md:text-[1.0625rem]">
             {about.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

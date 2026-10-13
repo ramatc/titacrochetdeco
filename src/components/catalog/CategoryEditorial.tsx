@@ -11,7 +11,7 @@ export function CategoryEditorial({ category }: { category: Category }) {
   return (
     <section
       aria-label={`Sobre ${category.name}`}
-      className="page-container border-t border-line py-16 md:py-24"
+      className="page-container border-t border-line py-16 md:py-section"
     >
       <div className="grid gap-12 md:grid-cols-3 md:gap-10">
         {category.editorial.map((block) => (
@@ -33,11 +33,11 @@ export function CategoryEditorial({ category }: { category: Category }) {
         {isCustom ? (
           <>
             ¿Buscás inspiración? Mirá los{" "}
-            <Link href="/catalogo/amigurumis" className="link-underline text-ink">
+            <Link href="/catalogo/amigurumis" className="link-inline text-ink">
               amigurumis
             </Link>{" "}
             y los{" "}
-            <Link href="/catalogo/ramos-y-flores" className="link-underline text-ink">
+            <Link href="/catalogo/ramos-y-flores" className="link-inline text-ink">
               ramos y flores
             </Link>{" "}
             del catálogo.
@@ -45,11 +45,11 @@ export function CategoryEditorial({ category }: { category: Category }) {
         ) : (
           <>
             ¿No encontrás lo que buscás? Mirá las{" "}
-            <Link href="/catalogo/personalizados" className="link-underline text-ink">
+            <Link href="/catalogo/personalizados" className="link-inline text-ink">
               piezas personalizadas
             </Link>{" "}
             o recorré el{" "}
-            <Link href="/catalogo" className="link-underline text-ink">
+            <Link href="/catalogo" className="link-inline text-ink">
               catálogo completo
             </Link>
             .

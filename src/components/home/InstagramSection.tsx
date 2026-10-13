@@ -4,26 +4,28 @@ import { feedPhotos } from "@/data/instagram";
 import { buttonClasses } from "@/components/ui/Button";
 import { InstagramIcon } from "@/components/ui/InstagramIcon";
 import { Photo } from "@/components/ui/Photo";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function InstagramSection() {
   return (
-    <section aria-labelledby="instagram-title" className="py-16 md:py-24">
-      <div className="page-container flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h2 id="instagram-title" className="display text-[2.5rem] md:text-[3.5rem]">
-            {instagramSection.title}
-          </h2>
-          <p className="mt-3 text-[0.9375rem] text-ink-soft">@{instagram.handle}</p>
-        </div>
-        <a
-          href={instagram.profileUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={buttonClasses("secondary", "self-start md:self-auto")}
-        >
-          <InstagramIcon />
-          {instagramSection.cta}
-        </a>
+    <section aria-labelledby="instagram-title" className="py-16 md:py-section">
+      <div className="page-container">
+        <SectionHeading
+          id="instagram-title"
+          title={instagramSection.title}
+          lead={`@${instagram.handle}`}
+          aside={
+            <a
+              href={instagram.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonClasses("secondary")}
+            >
+              <InstagramIcon />
+              {instagramSection.cta}
+            </a>
+          }
+        />
       </div>
 
       <ul className="mt-10 grid grid-cols-3 gap-1 md:mt-14 md:grid-cols-6">

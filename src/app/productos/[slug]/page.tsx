@@ -12,6 +12,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInfo } from "@/components/product/ProductInfo";
 import { ProductGrid } from "@/components/product/ProductGrid";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -89,13 +90,13 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
               </p>
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                 <li>
-                  <Link href={`/catalogo/${category.slug}`} className="link-underline text-ink">
+                  <Link href={`/catalogo/${category.slug}`} className="link-inline text-ink">
                     Ver más {category.name.toLowerCase()}
                   </Link>
                 </li>
                 {category.slug !== "personalizados" ? (
                   <li>
-                    <Link href="/catalogo/personalizados" className="link-underline text-ink">
+                    <Link href="/catalogo/personalizados" className="link-inline text-ink">
                       Pedir una pieza personalizada
                     </Link>
                   </li>
@@ -106,10 +107,8 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
         ) : null}
       </article>
 
-      <section aria-labelledby="relacionados-title" className="page-container border-t border-line py-16 md:py-24">
-        <h2 id="relacionados-title" className="display text-[2.25rem] md:text-[3rem]">
-          También te puede gustar
-        </h2>
+      <section aria-labelledby="relacionados-title" className="page-container border-t border-line py-16 md:py-section">
+        <SectionHeading id="relacionados-title" title="También te puede gustar" />
         <div className="mt-10">
           <ProductGrid products={related} editorial={false} showCategory />
         </div>

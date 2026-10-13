@@ -8,7 +8,7 @@ import { ProductGrid } from "@/components/product/ProductGrid";
 
 export function FeaturedProducts() {
   return (
-    <section aria-labelledby="favoritos-title" className="page-container py-16 md:py-24">
+    <section aria-labelledby="favoritos-title" className="page-container py-16 md:py-section">
       <SectionHeading
         id="favoritos-title"
         eyebrow={featuredSection.eyebrow}

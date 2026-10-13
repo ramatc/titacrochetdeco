@@ -103,6 +103,11 @@ export const about = {
   } satisfies Photo,
 };
 
+export const faqSection = {
+  eyebrow: "Preguntas frecuentes",
+  title: "Antes de pedir.",
+};
+
 export const instagramSection = {
   title: "Encontranos en Instagram",
   cta: "Seguir a Tita",
