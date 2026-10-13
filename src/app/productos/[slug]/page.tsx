@@ -50,6 +50,7 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
   const path = `/productos/${product.slug}`;
   const breadcrumbs = [
     { name: "Inicio", path: "/" },
+    { name: "Catálogo", path: "/catalogo" },
     ...(category ? [{ name: category.name, path: `/catalogo/${category.slug}` }] : []),
     { name: product.name, path },
   ];

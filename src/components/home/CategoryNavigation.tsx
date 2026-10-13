@@ -38,6 +38,7 @@ export function CategoryNavigation() {
                 <span className="display text-[1.5rem] md:text-[1.75rem]">{category.name}</span>
                 <span className="text-xs tabular-nums text-ink-soft">
                   {getProducts(category.slug).length}
+                  <span className="sr-only"> piezas</span>
                 </span>
               </span>
             </Link>

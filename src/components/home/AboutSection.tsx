@@ -78,7 +78,7 @@ function Note() {
   );
 }
 
-/** Masking tape strip, the same one that holds the editorial polaroid. */
+/** Blush masking tape strip; the editorial polaroid uses a grey one. */
 function Tape({ className }: { className: string }) {
   return (
     <span

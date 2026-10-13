@@ -34,7 +34,7 @@ export function CustomOrderSection() {
               sizes="(min-width: 1024px) 36vw, (min-width: 768px) 46vw, 88vw"
               className="aspect-[4/5]"
             />
-            <Sparkles className="absolute text-moss/45 -top-8 -left-7 w-12 sm:-top-10 sm:-left-12 sm:w-16" />
+            <Sparkles className="absolute text-clay/45 -top-8 -left-7 w-12 sm:-top-10 sm:-left-12 sm:w-16" />
             <Heart
               delay={700}
               className="absolute -right-6 -bottom-12 w-20 text-clay sm:-right-12 sm:-bottom-14 sm:w-24"

@@ -7,7 +7,6 @@ type PhotoProps = {
   className?: string;
   sizes: string;
   /** Preload the image: only for the likely LCP image(s) above the fold. */
-  /** Preload the image: only for the likely LCP image(s) above the fold. */
   priority?: boolean;
   /** Subtle zoom when an ancestor with the `group` class is hovered. */
   zoomOnHover?: boolean;
@@ -48,8 +47,8 @@ export function Photo({
         >
           <div className="pointer-events-none absolute inset-3 border border-dashed border-line-strong/70" />
           <div className="relative max-w-[16rem] text-center">
-            <p className="eyebrow text-ink-soft!">Foto pendiente</p>
-            <p className="mt-2 text-xs leading-relaxed text-ink-soft">{photo.alt}</p>
+            <p className="eyebrow text-ink!">Foto pendiente</p>
+            <p className="mt-2 text-xs leading-relaxed text-ink">{photo.alt}</p>
           </div>
         </div>
       )}

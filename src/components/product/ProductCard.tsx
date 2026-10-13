@@ -53,7 +53,7 @@ export function ProductCard({
         </div>
         <div className="mt-4 flex flex-col gap-1">
           {showCategory ? (
-            <span className="text-[0.6875rem] uppercase tracking-[0.14em] text-ink-soft">
+            <span className="eyebrow text-ink-soft!">
               {getCategory(product.category)?.name}
             </span>
           ) : null}

@@ -8,7 +8,7 @@ export default function Loading() {
     >
       <svg
         viewBox="0 0 120 80"
-        className="h-20 w-30 text-moss"
+        className="h-20 w-30 text-ink"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
