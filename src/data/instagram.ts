@@ -10,7 +10,11 @@ export type FeedPhoto = Photo & { postUrl?: string };
 export const feedPhotos: FeedPhoto[] = [
   { alt: "Flor tejida sostenida en la mano" },
   { alt: "Girasol sonriente tejido" },
-  { alt: "Ramo de rosas y girasol tejido" },
+  {
+    src: "/images/productos/ramo-tulipanes-y-lavandas-1.jpg",
+    alt: "Ramo tejido con un tulipán rojo, un tulipán blanco y lavandas violetas, envuelto en tul",
+    postUrl: "https://www.instagram.com/p/Cn5MIiJubbl/",
+  },
   {
     src: "/images/productos/vaca-personalizada-1.jpg",
     alt: "Vaca personalizada tejida al crochet, blanca con manchas negras y cuernos marrones",

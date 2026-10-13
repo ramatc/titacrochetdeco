@@ -318,6 +318,26 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "ramo-tulipanes-y-lavandas",
+    name: "Ramo Tulipanes y Lavandas",
+    category: "ramos-y-flores",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/ramo-tulipanes-y-lavandas-1.jpg",
+        alt: "Ramo tejido con un tulipán rojo, un tulipán blanco y dos lavandas violetas, envuelto en tul blanco",
+      },
+      {
+        src: "/images/productos/ramo-tulipanes-y-lavandas-2.jpg",
+        alt: "Detalle de los tulipanes rojo y blanco tejidos con sus hojas verdes, entre lavandas violetas",
+      },
+    ],
+    description: "Dos tulipanes, uno rojo y uno blanco, acompañados de lavandas y envueltos en tul.",
+    colors: "Rojo, blanco, violeta y verde",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "girasol-con-shrek",
     name: "Girasol con Shrek",
     category: "ramos-y-flores",
