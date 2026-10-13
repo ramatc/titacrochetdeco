@@ -30,7 +30,7 @@ export function InstagramSection() {
         {feedPhotos.map((photo, index) => (
           <li key={index}>
             <a
-              href={instagram.profileUrl}
+              href={photo.postUrl ?? instagram.profileUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
