@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    // AVIF first (smaller), WebP as fallback; both served from the source JPGs.
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       { source: "/catalogo/flores", destination: "/catalogo/ramos-y-flores", permanent: true },

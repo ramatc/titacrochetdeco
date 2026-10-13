@@ -30,7 +30,7 @@ export function ProductInfo({ product }: { product: Product }) {
         </Link>
       ) : null}
 
-      <h1 className="display mt-4 text-[2.75rem] md:text-[3.75rem]">{product.name}</h1>
+      <h1 className="display mt-4 text-[2.5rem] md:text-[3.25rem]">{product.headline}</h1>
       <p className="mt-4 text-lg tabular-nums text-ink">{formatPrice(product)}</p>
 
       <p className="mt-8 max-w-md text-[0.9375rem] leading-relaxed text-ink-soft">

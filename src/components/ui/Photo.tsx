@@ -6,6 +6,8 @@ type PhotoProps = {
   /** Frame classes: aspect ratio, sizing, rounding. */
   className?: string;
   sizes: string;
+  /** Preload the image: only for the likely LCP image(s) above the fold. */
+  /** Preload the image: only for the likely LCP image(s) above the fold. */
   priority?: boolean;
   /** Subtle zoom when an ancestor with the `group` class is hovered. */
   zoomOnHover?: boolean;
@@ -34,7 +36,7 @@ export function Photo({
           alt={photo.alt}
           fill
           sizes={sizes}
-          priority={priority}
+          preload={priority}
           className={`object-cover ${zoom}`}
           style={photo.focus ? { objectPosition: photo.focus } : undefined}
         />

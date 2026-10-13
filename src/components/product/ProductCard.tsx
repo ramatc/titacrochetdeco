@@ -10,6 +10,7 @@ type ProductCardProps = {
   editorial?: boolean;
   showCategory?: boolean;
   priority?: boolean;
+  headingLevel?: 2 | 3;
 };
 
 const frames = {
@@ -23,7 +24,9 @@ export function ProductCard({
   editorial = true,
   showCategory = false,
   priority = false,
+  headingLevel = 3,
 }: ProductCardProps) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   const format = editorial ? (product.cardFormat ?? "portrait") : "portrait";
   const isWide = format === "wide";
   const sizes = isWide
@@ -54,7 +57,7 @@ export function ProductCard({
               {getCategory(product.category)?.name}
             </span>
           ) : null}
-          <h3 className="text-[0.9375rem] leading-snug text-ink">{product.name}</h3>
+          <Heading className="text-[0.9375rem] leading-snug text-ink">{product.name}</Heading>
           <p className="text-sm tabular-nums text-ink-soft">{formatPrice(product)}</p>
         </div>
       </Link>

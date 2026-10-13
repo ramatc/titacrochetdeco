@@ -8,11 +8,14 @@ export function Hero() {
     <section aria-labelledby="hero-title" className="page-container pb-20 pt-10 md:pb-28 md:pt-16">
       <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5 lg:pb-6">
-          <p className="eyebrow">{hero.eyebrow}</p>
-          <h1 id="hero-title" className="display mt-6 text-[3.25rem] sm:text-[4.25rem] lg:text-[5.25rem]">
-            {hero.title[0]}
-            <br />
-            <em className="italic">{hero.title[1]}</em>
+          {/* The eyebrow is part of the H1 so the heading says what Tita makes, not only the tagline. */}
+          <h1 id="hero-title">
+            <span className="eyebrow block">{hero.eyebrow}</span>
+            <span className="display mt-6 block text-[3.25rem] sm:text-[4.25rem] lg:text-[5.25rem]">
+              {hero.title[0]}
+              <br />
+              <em className="italic">{hero.title[1]}</em>
+            </span>
           </h1>
           <p className="mt-6 max-w-sm text-base leading-relaxed text-ink-soft md:text-[1.0625rem]">
             {hero.lead}

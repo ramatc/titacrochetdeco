@@ -14,6 +14,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasoles",
     name: "Ramo Girasoles",
+    headline: "Ramo de girasoles tejido a crochet",
     category: "ramos-y-flores",
     price: 33000,
     images: [
@@ -21,8 +22,6 @@ export const products: Product[] = [
         src: "/images/productos/ramo-girasoles-1.jpg",
         alt: "Ramo de tres girasoles tejidos al crochet con hojas verdes, envuelto en papel kraft con una tarjeta, sobre tela blanca",
       },
-      { alt: "Detalle del centro tejido de un girasol" },
-      { alt: "Ramo de girasoles sostenido en la mano" },
     ],
     description:
       "Girasoles tejidos uno a uno, con su centro texturado y hojas verdes. Un ramo luminoso que dura para siempre.",
@@ -34,6 +33,7 @@ export const products: Product[] = [
   {
     slug: "ramo-rosas-y-margaritas",
     name: "Ramo Rosas y Margaritas",
+    headline: "Ramo de rosas y margaritas tejido a crochet",
     category: "ramos-y-flores",
     price: 42000,
     images: [
@@ -56,6 +56,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasol-y-rosa",
     name: "Ramo Girasol y Rosa",
+    headline: "Ramo de girasol y rosa tejido a crochet",
     category: "ramos-y-flores",
     price: 23500,
     images: [
@@ -74,6 +75,7 @@ export const products: Product[] = [
   {
     slug: "girasol-sonriente",
     name: "Flor Shrek",
+    headline: "Girasol sonriente tejido a crochet",
     category: "ramos-y-flores",
     price: 14000,
     images: [
@@ -100,6 +102,7 @@ export const products: Product[] = [
   {
     slug: "flor-rapunzel-con-pascal",
     name: "Flor de Rapunzel con Pascal",
+    headline: "Lirio tejido a crochet con camaleón",
     category: "ramos-y-flores",
     price: 30000,
     images: [
@@ -130,6 +133,7 @@ export const products: Product[] = [
   {
     slug: "rosa-individual",
     name: "Rosa",
+    headline: "Rosa tejida a crochet",
     category: "ramos-y-flores",
     price: 12500,
     images: [
@@ -148,6 +152,7 @@ export const products: Product[] = [
   {
     slug: "snoopy-con-ramito",
     name: "Snoopy con Ramito",
+    headline: "Amigurumi de Snoopy con ramito de flores",
     category: "amigurumis",
     price: 32000,
     images: [
@@ -155,7 +160,6 @@ export const products: Product[] = [
         src: "/images/productos/snoopy-con-ramito-1.jpg",
         alt: "Amigurumi de perrito blanco con collar rojo sosteniendo un ramito de flores amarillas, sobre tela blanca",
       },
-      { alt: "Detalle de la cara del amigurumi" },
     ],
     description:
       "Amigurumi tejido a mano con un pequeño ramo de flores amarillas. Para abrazar y para guardar.",
@@ -167,6 +171,7 @@ export const products: Product[] = [
   {
     slug: "hombre-arana",
     name: "Hombre Araña",
+    headline: "Amigurumi de Hombre Araña tejido a mano",
     category: "amigurumis",
     price: 30000,
     images: [
@@ -194,6 +199,7 @@ export const products: Product[] = [
   {
     slug: "snoopy-corazon",
     name: "Snoopy Corazón",
+    headline: "Amigurumi de Snoopy con corazón",
     category: "amigurumis",
     price: 30000,
     images: [
@@ -223,6 +229,7 @@ export const products: Product[] = [
   {
     slug: "combo-taza-amigurumi",
     name: "Combo Taza + Amigurumi",
+    headline: "Combo de taza personalizada y amigurumi",
     category: "combos",
     price: 40000,
     images: [
@@ -245,6 +252,7 @@ export const products: Product[] = [
   {
     slug: "munecos-personalizados",
     name: "Muñecos Personalizados",
+    headline: "Muñecos personalizados tejidos a crochet",
     category: "personalizados",
     price: 45000,
     priceFrom: true,
@@ -270,6 +278,7 @@ export const products: Product[] = [
   {
     slug: "ramo-tres-rosas",
     name: "Ramo Tres Rosas",
+    headline: "Ramo de tres rosas rojas tejidas a crochet",
     category: "ramos-y-flores",
     price: 37500,
     images: [
@@ -287,6 +296,7 @@ export const products: Product[] = [
   {
     slug: "ramo-shrek-y-fiona",
     name: "Ramo Shrek y Fiona",
+    headline: "Ramo de girasoles y rosas a crochet con Shrek y Fiona",
     category: "ramos-y-flores",
     price: null,
     images: [
@@ -304,6 +314,7 @@ export const products: Product[] = [
   {
     slug: "ramo-girasol-y-tulipan",
     name: "Ramo Girasol y Tulipán",
+    headline: "Ramo de girasol y tulipán tejido a crochet",
     category: "ramos-y-flores",
     price: 19500,
     images: [
@@ -320,6 +331,7 @@ export const products: Product[] = [
   {
     slug: "girasol-con-shrek",
     name: "Girasol con Shrek",
+    headline: "Girasol tejido a crochet con mini amigurumi de Shrek",
     category: "ramos-y-flores",
     price: null,
     images: [
@@ -337,6 +349,7 @@ export const products: Product[] = [
   {
     slug: "ramo-margarita",
     name: "Ramo Margarita",
+    headline: "Ramito de margaritas tejidas a crochet",
     category: "ramos-y-flores",
     price: 26000,
     images: [
@@ -356,6 +369,7 @@ export const products: Product[] = [
   {
     slug: "naruto-y-kurama",
     name: "Naruto y Kurama",
+    headline: "Amigurumis de Naruto y Kurama",
     category: "amigurumis",
     price: null,
     images: [
@@ -380,6 +394,7 @@ export const products: Product[] = [
   {
     slug: "darth-vader",
     name: "Darth Vader",
+    headline: "Amigurumi de Darth Vader tejido a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -400,6 +415,7 @@ export const products: Product[] = [
   {
     slug: "shrek",
     name: "Shrek",
+    headline: "Amigurumi de Shrek tejido a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -420,6 +436,7 @@ export const products: Product[] = [
   {
     slug: "abejita",
     name: "Abejita",
+    headline: "Abejita amigurumi tejida a crochet",
     category: "amigurumis",
     price: null,
     images: [
@@ -437,6 +454,7 @@ export const products: Product[] = [
   {
     slug: "dobby",
     name: "Dobby",
+    headline: "Amigurumi de Dobby tejido a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -455,6 +473,7 @@ export const products: Product[] = [
   {
     slug: "chimuelo",
     name: "Chimuelo",
+    headline: "Amigurumi de Chimuelo tejido a crochet",
     category: "amigurumis",
     price: null,
     images: [
@@ -476,6 +495,7 @@ export const products: Product[] = [
   {
     slug: "coraline",
     name: "Coraline",
+    headline: "Muñeca amigurumi de Coraline tejida a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -493,6 +513,7 @@ export const products: Product[] = [
   {
     slug: "furia",
     name: "Furia",
+    headline: "Amigurumi de Furia tejido a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -509,6 +530,7 @@ export const products: Product[] = [
   {
     slug: "frida",
     name: "Frida",
+    headline: "Muñeca amigurumi de Frida tejida a crochet",
     category: "amigurumis",
     price: null,
     images: [
@@ -525,6 +547,7 @@ export const products: Product[] = [
   {
     slug: "caballo",
     name: "Caballo",
+    headline: "Caballo amigurumi tejido a crochet",
     category: "amigurumis",
     price: null,
     images: [
@@ -554,6 +577,7 @@ export const products: Product[] = [
   {
     slug: "mascota-personalizada",
     name: "Mascota Personalizada",
+    headline: "Mascota personalizada tejida a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -571,6 +595,7 @@ export const products: Product[] = [
   {
     slug: "vaca-personalizada",
     name: "Vaca Personalizada",
+    headline: "Vaca amigurumi personalizada tejida a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -589,6 +614,7 @@ export const products: Product[] = [
   {
     slug: "ramo-personalizado",
     name: "Ramo Personalizado",
+    headline: "Ramo personalizado de flores tejidas a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -610,6 +636,7 @@ export const products: Product[] = [
   {
     slug: "pareja-personalizada",
     name: "Pareja Personalizada",
+    headline: "Pareja de muñecos personalizados tejidos a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -628,6 +655,7 @@ export const products: Product[] = [
   {
     slug: "camaleon-pascal",
     name: "Camaleón Pascal",
+    headline: "Camaleón amigurumi con flor tejido a crochet",
     category: "amigurumis",
     price: 14000,
     images: [
@@ -653,6 +681,7 @@ export const products: Product[] = [
   {
     slug: "carpincho-argentino",
     name: "Carpincho Argentino",
+    headline: "Carpincho amigurumi tejido a crochet",
     category: "amigurumis",
     price: null,
     images: [
@@ -677,6 +706,7 @@ export const products: Product[] = [
   {
     slug: "pooh-con-rosa",
     name: "Pooh con Rosa",
+    headline: "Amigurumi de Pooh con rosa tejida",
     category: "amigurumis",
     price: null,
     images: [
@@ -697,6 +727,7 @@ export const products: Product[] = [
   {
     slug: "combo-tita",
     name: "Combo Tita",
+    headline: "Set para bebé: conejito de apego y sonajero tejidos",
     category: "baby",
     price: null,
     images: [
@@ -722,6 +753,7 @@ export const products: Product[] = [
   {
     slug: "set-piglet",
     name: "Set Piglet",
+    headline: "Set para bebé de Piglet: muñeco y sonajero tejidos",
     category: "baby",
     price: null,
     images: [
@@ -752,6 +784,7 @@ export const products: Product[] = [
   {
     slug: "set-lilo-y-stitch",
     name: "Set Lilo y Stitch",
+    headline: "Set para bebé: muñeca de Lilo y sonajero de Stitch",
     category: "baby",
     price: null,
     images: [
@@ -776,6 +809,7 @@ export const products: Product[] = [
   {
     slug: "combo-taza-hombre-arana",
     name: "Combo Taza + Hombre Araña",
+    headline: "Combo de taza y amigurumi de Hombre Araña",
     category: "combos",
     price: null,
     images: [
@@ -792,6 +826,7 @@ export const products: Product[] = [
   {
     slug: "combo-taza-girasol",
     name: "Combo Taza + Girasol",
+    headline: "Combo de taza y girasol tejido a crochet",
     category: "combos",
     price: null,
     images: [
@@ -808,6 +843,7 @@ export const products: Product[] = [
   {
     slug: "combo-taza-rosa",
     name: "Combo Taza + Rosa",
+    headline: "Combo de taza y rosa tejida a crochet",
     category: "combos",
     price: null,
     images: [
@@ -824,6 +860,7 @@ export const products: Product[] = [
   {
     slug: "hada-personalizada",
     name: "Hada Personalizada",
+    headline: "Muñeca hada personalizada tejida a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -845,6 +882,7 @@ export const products: Product[] = [
   {
     slug: "muneca-con-velo",
     name: "Muñeca con Velo",
+    headline: "Muñeca personalizada con velo tejida a crochet",
     category: "personalizados",
     price: null,
     images: [
@@ -861,6 +899,7 @@ export const products: Product[] = [
   {
     slug: "it-takes-two",
     name: "It Takes Two",
+    headline: "Amigurumis de May y Cody tejidos de la mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -878,6 +917,7 @@ export const products: Product[] = [
   {
     slug: "iron-man",
     name: "Iron Man",
+    headline: "Amigurumi de Iron Man tejido a mano",
     category: "amigurumis",
     price: null,
     images: [
@@ -894,6 +934,7 @@ export const products: Product[] = [
   {
     slug: "ramo-messi",
     name: "Ramo de Messi",
+    headline: "Ramo de tulipanes tejidos con muñeco de Messi",
     category: "ramos-y-flores",
     price: null,
     images: [

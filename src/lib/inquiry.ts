@@ -1,4 +1,5 @@
-import { instagram, site } from "@/content/site";
+import { instagram } from "@/content/site";
+import { absoluteUrl } from "@/lib/site-url";
 import type { Product } from "@/types/catalog";
 import { formatPrice } from "./format";
 
@@ -11,7 +12,7 @@ import { formatPrice } from "./format";
  */
 
 export function productInquiryMessage(product: Product): string {
-  const url = `${site.url}/productos/${product.slug}`;
+  const url = absoluteUrl(`/productos/${product.slug}`);
   return `¡Hola Tita! Me interesa "${product.name}" (${formatPrice(product)}). ${url}`;
 }
 

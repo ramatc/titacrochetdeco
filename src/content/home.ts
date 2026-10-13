@@ -6,9 +6,10 @@ import type { Photo } from "@/types/catalog";
  */
 
 export const hero = {
-  eyebrow: "Tejido a mano en Buenos Aires",
+  /** Rendered inside the H1, above the tagline: says what Tita makes and where. */
+  eyebrow: "Crochet hecho a mano en Buenos Aires",
   title: ["Pequeñas cosas,", "tejidas para quedarse."],
-  lead: "Flores, amigurumis y piezas hechas a mano, punto por punto.",
+  lead: "Ramos de flores, amigurumis y regalos personalizados, tejidos a mano punto por punto.",
   primaryCta: { label: "Ver catálogo", href: "/catalogo" },
   secondaryCta: { label: "Hacer un pedido", href: "#como-pedir" },
   photo: {
@@ -19,7 +20,7 @@ export const hero = {
 
 export const categoriesSection = {
   title: "Encontrá tu Tita",
-  lead: "Cinco familias de piezas, todas tejidas a mano.",
+  lead: "Flores, amigurumis, piezas para bebés, combos y personalizados, todo tejido a mano.",
 };
 
 export const featuredSection = {
@@ -36,10 +37,12 @@ export const editorial = {
     "Por eso cada una puede tener pequeños detalles que la hacen única: no salen de una máquina, salen de unas manos y de varias horas de trabajo.",
   ],
   photo: {
-    alt: "Detalle cercano de la textura del tejido al crochet",
+    src: "/images/productos/girasol-sonriente-3.jpg",
+    alt: "Muchos girasoles sonrientes tejidos al crochet, embolsados con tarjeta y listos para entregar",
   } satisfies Photo,
   secondaryPhoto: {
-    alt: "Ovillos de hilo de algodón en colores cálidos",
+    src: "/images/productos/camaleon-pascal-2.jpg",
+    alt: "Cuatro camaleones verdes tejidos al crochet con flores rosas",
   } satisfies Photo,
 };
 
@@ -87,6 +90,7 @@ export const about = {
   title: "Detrás de cada punto hay tiempo.",
   body: [
     "Tita es un pequeño taller de crochet en Lomas del Mirador. Cada pieza se teje a mano, una por vez, con hilos de algodón y mucha paciencia.",
+    "Tejemos ramos y flores que no se marchitan, amigurumis, piezas para bebés y regalos personalizados. Los pedidos se coordinan por Instagram y enviamos a todo Argentina.",
     "¿Y por qué Tita? Por ella: Tita es la coneja de la casa, la compañera de cada tarde de tejido. El taller lleva su nombre porque, de alguna forma, todo empezó a su lado.",
   ],
   photo: {

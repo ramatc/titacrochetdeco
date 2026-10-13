@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getCategories } from "@/lib/catalog";
 import { ButtonLink } from "@/components/ui/Button";
+
+// Next marks not-found responses as noindex automatically.
+export const metadata: Metadata = {
+  title: "Página no encontrada",
+};
 
 export default function NotFound() {
   return (
@@ -11,6 +19,17 @@ export default function NotFound() {
       <ButtonLink href="/catalogo" className="mt-10">
         Ver catálogo
       </ButtonLink>
+      <nav aria-label="Categorías" className="mt-10">
+        <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {getCategories().map((category) => (
+            <li key={category.slug}>
+              <Link href={`/catalogo/${category.slug}`} className="link-underline text-ink">
+                {category.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </section>
   );
 }

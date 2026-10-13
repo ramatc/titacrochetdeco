@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { site } from "@/content/site";
 import { getCategory, getProduct, getRelatedProducts } from "@/lib/catalog";
+import { pageMetadata, productMetaDescription } from "@/lib/seo";
+import { breadcrumbSchema, jsonLdGraph, productSchema } from "@/lib/structured-data";
 import { products } from "@/data/products";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInfo } from "@/components/product/ProductInfo";
 import { ProductGrid } from "@/components/product/ProductGrid";
@@ -17,18 +22,12 @@ export async function generateMetadata({ params }: PageProps<"/productos/[slug]"
   const product = getProduct(slug);
   if (!product) return {};
 
-  const cover = product.images[0];
-  return {
-    title: product.name,
-    description: product.description,
-    alternates: { canonical: `/productos/${product.slug}` },
-    openGraph: {
-      title: `${product.name} | ${site.name}`,
-      description: product.description,
-      url: `/productos/${product.slug}`,
-      ...(cover.src ? { images: [{ url: cover.src, alt: cover.alt }] } : {}),
-    },
-  };
+  return pageMetadata({
+    title: product.headline,
+    description: productMetaDescription(product.description),
+    path: `/productos/${product.slug}`,
+    image: product.images[0],
+  });
 }
 
 // URL data is read inside <Suspense> so navigations show the layout instantly.
@@ -47,30 +46,19 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
 
   const related = getRelatedProducts(product);
   const category = getCategory(product.category);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    category: category?.name,
-    brand: { "@type": "Brand", name: site.name },
-    url: `${site.url}/productos/${product.slug}`,
-    ...(product.images[0].src ? { image: `${site.url}${product.images[0].src}` } : {}),
-    ...(product.price !== null
-      ? { offers: { "@type": "Offer", price: product.price, priceCurrency: "ARS" } }
-      : {}),
-  };
+  const path = `/productos/${product.slug}`;
+  const breadcrumbs = [
+    { name: "Inicio", path: "/" },
+    ...(category ? [{ name: category.name, path: `/catalogo/${category.slug}` }] : []),
+    { name: product.name, path },
+  ];
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        // Static data authored in this repo; escape "<" to keep the script inert.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
+      <JsonLd data={jsonLdGraph(productSchema(product, category), breadcrumbSchema(breadcrumbs))} />
 
-      <article className="page-container pb-20 pt-6 md:pt-12">
+      <article className="page-container pb-16 pt-6 md:pb-20 md:pt-10">
+        <Breadcrumbs items={breadcrumbs} className="mb-6 md:mb-10" />
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <ProductGallery images={product.images} name={product.name} />
@@ -81,6 +69,41 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
             </div>
           </div>
         </div>
+
+        {category ? (
+          <section
+            aria-labelledby="sobre-esta-pieza-title"
+            className="mt-16 grid gap-6 border-t border-line pt-12 md:mt-24 md:grid-cols-12 md:gap-10"
+          >
+            <h2
+              id="sobre-esta-pieza-title"
+              className="display text-[1.75rem] md:col-span-4 md:text-[2.25rem]"
+            >
+              Sobre esta pieza
+            </h2>
+            <div className="max-w-xl text-[0.9375rem] leading-relaxed text-ink-soft md:col-span-7 md:col-start-6">
+              <p>{category.productNote}</p>
+              <p className="mt-4">
+                Hecha a mano en {site.location}. Enviamos a todo Argentina y coordinamos cada pedido
+                por Instagram.
+              </p>
+              <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                <li>
+                  <Link href={`/catalogo/${category.slug}`} className="link-underline text-ink">
+                    Ver más {category.name.toLowerCase()}
+                  </Link>
+                </li>
+                {category.slug !== "personalizados" ? (
+                  <li>
+                    <Link href="/catalogo/personalizados" className="link-underline text-ink">
+                      Pedir una pieza personalizada
+                    </Link>
+                  </li>
+                ) : null}
+              </ul>
+            </div>
+          </section>
+        ) : null}
       </article>
 
       <section aria-labelledby="relacionados-title" className="page-container border-t border-line py-16 md:py-24">

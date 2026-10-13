@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getCategories } from "@/lib/catalog";
+import type { BreadcrumbItem } from "@/lib/structured-data";
 import { pillClasses } from "@/components/ui/Pill";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import type { Category, Product } from "@/types/catalog";
 
@@ -8,6 +10,7 @@ type CatalogViewProps = {
   title: string;
   lead: string;
   products: Product[];
+  breadcrumbs: BreadcrumbItem[];
   /** Currently selected category; undefined means "Todos". */
   current?: Category;
 };
@@ -16,7 +19,7 @@ type CatalogViewProps = {
  * Full catalog layout used by /catalogo and /catalogo/[categoria].
  * Filters are plain links, so every category view is static and shareable.
  */
-export function CatalogView({ title, lead, products, current }: CatalogViewProps) {
+export function CatalogView({ title, lead, products, breadcrumbs, current }: CatalogViewProps) {
   const filters = [
     { href: "/catalogo", label: "Todos", active: !current },
     ...getCategories().map((c) => ({
@@ -27,10 +30,10 @@ export function CatalogView({ title, lead, products, current }: CatalogViewProps
   ];
 
   return (
-    <div className="page-container pb-24 pt-12 md:pt-20">
+    <div className="page-container pb-24 pt-10 md:pt-16">
       <header className="max-w-2xl">
-        <p className="eyebrow">Catálogo</p>
-        <h1 className="display mt-6 text-[3.25rem] md:text-[5rem]">{title}</h1>
+        <Breadcrumbs items={breadcrumbs} />
+        <h1 className="display mt-8 text-[3rem] md:text-[4.5rem]">{title}</h1>
         <p className="mt-5 text-[0.9375rem] leading-relaxed text-ink-soft">{lead}</p>
       </header>
 
@@ -58,7 +61,8 @@ export function CatalogView({ title, lead, products, current }: CatalogViewProps
       </p>
 
       <div className="mt-6">
-        <ProductGrid products={products} showCategory={!current} priorityCount={4} />
+        {/* Card titles are H2 here: they sit directly under the page H1. */}
+        <ProductGrid products={products} showCategory={!current} priorityCount={4} headingLevel={2} />
       </div>
     </div>
   );

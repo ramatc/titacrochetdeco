@@ -1,9 +1,8 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { site } from "@/content/site";
 
-export const alt = site.title;
+export const alt = "Tita Crochet: ramos, flores y amigurumis tejidos a mano";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

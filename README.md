@@ -54,10 +54,21 @@ src/
   components/   layout/, home/, product/, catalog/, ui/
   content/      editable copy and site settings
   data/         products, categories, feed photos
-  lib/          catalog queries, price formatting, inquiry messages
+  lib/          catalog queries, price formatting, inquiry messages, SEO helpers
   types/        shared types
 ```
 
 Production: https://titacrochetdeco.vercel.app (deploys on every push to `main`).
-Set `NEXT_PUBLIC_SITE_URL` when moving to a custom domain so canonical URLs, sitemap and
-OpenGraph use it.
+The public base URL lives in one place, `src/lib/site-url.ts`, and defaults to the Vercel URL.
+To move to a custom domain, set `NEXT_PUBLIC_SITE_URL` (e.g. `https://titacrochet.com.ar`) in the
+Vercel project and redeploy: canonicals, sitemap, robots, JSON-LD and Open Graph all build
+absolute URLs through `absoluteUrl()`, so no component needs to change.
+
+## SEO
+
+- Per-page metadata: `pageMetadata()` in `src/lib/seo.ts` (title, description, canonical, Open Graph, Twitter).
+- Structured data: `src/lib/structured-data.ts` (Organization + WebSite on the home page, Product,
+  CollectionPage and BreadcrumbList). No ratings, reviews, stock or SKUs.
+- Category copy (H1, intro, editorial blocks, meta title/description): `src/data/categories.ts`.
+- Product H1 and `<title>`: the `headline` field in `src/data/products.ts`.
+- FAQ: `src/content/faq.ts`, visible content only (no FAQPage schema).

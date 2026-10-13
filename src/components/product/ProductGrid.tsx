@@ -10,6 +10,8 @@ type ProductGridProps = {
   columns?: 3 | 4;
   /** Mark the first N images as high priority (above the fold). */
   priorityCount?: number;
+  /** Heading level for card titles: 2 under a page H1, 3 under a section H2. */
+  headingLevel?: 2 | 3;
 };
 
 export function ProductGrid({
@@ -18,6 +20,7 @@ export function ProductGrid({
   showCategory = false,
   columns = 4,
   priorityCount = 0,
+  headingLevel = 3,
 }: ProductGridProps) {
   if (products.length === 0) {
     return (
@@ -40,6 +43,7 @@ export function ProductGrid({
           editorial={editorial}
           showCategory={showCategory}
           priority={index < priorityCount}
+          headingLevel={headingLevel}
         />
       ))}
     </ul>
