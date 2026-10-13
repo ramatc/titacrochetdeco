@@ -507,6 +507,22 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "frida",
+    name: "Frida",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/frida-1.jpg",
+        alt: "Amigurumi de Frida Kahlo con corona de flores de colores, blusa rosa y pollera violeta con flores, sobre tela blanca",
+      },
+    ],
+    description: "Frida tejida a mano, con su corona de flores, su blusa con volados y su pollera violeta.",
+    colors: "Violeta, rosa, negro y multicolor",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "mascota-personalizada",
     name: "Mascota Personalizada",
     category: "personalizados",

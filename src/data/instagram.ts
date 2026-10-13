@@ -16,7 +16,11 @@ export const feedPhotos: FeedPhoto[] = [
     alt: "Vaca personalizada tejida al crochet, blanca con manchas negras y cuernos marrones",
     postUrl: "https://www.instagram.com/p/C95ZOX-vxiv/",
   },
-  { alt: "Girasoles tejidos listos para entregar" },
+  {
+    src: "/images/productos/frida-1.jpg",
+    alt: "Amigurumi de Frida Kahlo con corona de flores de colores, blusa rosa y pollera violeta",
+    postUrl: "https://www.instagram.com/p/C2V9ugWuwCC/",
+  },
   {
     src: "/images/productos/furia-1.jpg",
     alt: "Amigurumi de Furia de Intensamente, rojo con ceño fruncido, camisa blanca y corbata roja",
