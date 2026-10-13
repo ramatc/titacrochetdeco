@@ -20,6 +20,8 @@
   --color-moss-deep: #283830; /* primary action hover */
   --color-clay: #8b4640; /* eyebrows, small editorial marks */
   --color-mustard: #d2a72c; /* reserved, not used in UI chrome */
+  --color-sage: #b4bea6; /* decorative shapes only */
+  --color-blush: #e6cfc6; /* decorative shapes only */
 
   /* Type */
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
@@ -197,5 +199,26 @@
   .reveal[data-visible="true"] {
     opacity: 1;
     transform: none;
+  }
+}
+
+/*
+ * Editorial thread: strokes draw themselves in once, after their reveal.
+ * Fully drawn by default, so it only animates when motion is welcome.
+ */
+.thread :is(path, ellipse, circle) {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .reveal .thread :is(path, ellipse, circle) {
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1600ms var(--ease-soft);
+    transition-delay: calc(var(--reveal-delay, 0ms) + var(--draw-delay, 300ms));
+  }
+
+  .reveal[data-visible="true"] .thread :is(path, ellipse, circle) {
+    stroke-dashoffset: 0;
   }
 }
