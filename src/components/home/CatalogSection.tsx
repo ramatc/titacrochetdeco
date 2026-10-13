@@ -21,6 +21,10 @@ export function CatalogSection({ products, categories, limit = 8 }: CatalogSecti
   const [active, setActive] = useState<CategorySlug | null>(null);
   const filtered = active ? products.filter((p) => p.category === active) : products;
   const visible = filtered.slice(0, limit);
+  const activeCategory = categories.find((c) => c.slug === active);
+  const cta = activeCategory
+    ? { href: `/catalogo/${activeCategory.slug}`, label: catalogSection.categoryCtaLabel(activeCategory.name) }
+    : catalogSection.cta;
 
   const filters: { slug: CategorySlug | null; label: string }[] = [
     { slug: null, label: catalogSection.allLabel },
@@ -57,11 +61,8 @@ export function CatalogSection({ products, categories, limit = 8 }: CatalogSecti
       </div>
 
       <div className="mt-16 flex justify-center">
-        <ButtonLink
-          href={active ? `/catalogo/${active}` : catalogSection.cta.href}
-          variant="secondary"
-        >
-          {catalogSection.cta.label}
+        <ButtonLink href={cta.href} variant="secondary">
+          {cta.label}
           <ArrowRight className="size-4" strokeWidth={1.5} aria-hidden="true" />
         </ButtonLink>
       </div>

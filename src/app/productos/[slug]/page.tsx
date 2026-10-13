@@ -91,7 +91,7 @@ async function ProductContent({ params }: { params: Promise<{ slug: string }> })
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
                 <li>
                   <Link href={`/catalogo/${category.slug}`} className="link-inline text-ink">
-                    Ver más {category.name.toLowerCase()}
+                    Ver más de {category.name}
                   </Link>
                 </li>
                 {category.slug !== "personalizados" ? (

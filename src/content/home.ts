@@ -50,7 +50,9 @@ export const catalogSection = {
   title: "El catálogo",
   lead: "Precios de referencia. Cada pieza se confirma por mensaje.",
   allLabel: "Todos",
-  cta: { label: "Abrir catálogo completo", href: "/catalogo" },
+  cta: { label: "Ver todo el catálogo", href: "/catalogo" },
+  /** CTA label while a category filter is active. */
+  categoryCtaLabel: (category: string) => `Ver más de ${category}`,
 };
 
 export const customSection = {
