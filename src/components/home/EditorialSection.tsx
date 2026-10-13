@@ -2,6 +2,8 @@ import type { CSSProperties } from "react";
 import { editorial } from "@/content/home";
 import { Photo } from "@/components/ui/Photo";
 import { Reveal } from "@/components/ui/Reveal";
+import { BLOB_ROSE, BLOB_SAGE, Blob } from "@/components/ui/Blob";
+import { Flower } from "@/components/ui/Doodles";
 
 /**
  * A scrapbook composition: the main photo framed by soft yarn-colored blobs,
@@ -17,11 +19,11 @@ export function EditorialSection() {
         <div className="relative pb-14 sm:pb-20 lg:col-span-7 lg:pb-16">
           <Blob
             path={BLOB_SAGE}
-            className="-top-6 -left-6 w-[40%] text-sage sm:-top-10 sm:-left-10"
+            className="-top-6 -left-6 aspect-square w-[40%] text-sage sm:-top-10 sm:-left-10"
           />
           <Blob
             path={BLOB_ROSE}
-            className="bottom-4 -left-8 w-[34%] text-blush sm:-left-12"
+            className="bottom-4 -left-8 aspect-square w-[34%] text-blush sm:-left-12"
           />
 
           <Reveal className="relative ml-[4%] w-[82%] sm:w-[80%]">
@@ -76,25 +78,6 @@ function Polaroid() {
   );
 }
 
-const BLOB_SAGE =
-  "M52 14C86-4 150 2 176 34c26 32 22 86-4 122-26 36-80 48-118 30C16 168-2 124 4 84 9 48 22 30 52 14Z";
-const BLOB_ROSE =
-  "M40 30c30-26 92-30 126-4 34 26 38 84 10 118-28 34-86 44-124 22C14 144 0 104 8 72c5-20 16-30 32-42Z";
-
-function Blob({ path, className }: { path: string; className: string }) {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 200 200"
-      className={`pointer-events-none absolute aspect-square ${className}`}
-    >
-      <path d={path} fill="currentColor" />
-    </svg>
-  );
-}
-
-const PETALS = [0, 72, 144, 216, 288];
-
 /** Hand-drawn thread ending in a flower; strokes draw in once on reveal. */
 function Thread({ className }: { className: string }) {
   const bloom = { "--draw-delay": "1100ms" } as CSSProperties;
@@ -115,20 +98,7 @@ function Thread({ className }: { className: string }) {
         d="M2 92c26-22 58-34 92-22 30 11 48 36 86 34 40-2 62-30 82-58 6-9 12-18 18-24"
       />
       <path pathLength={1} style={bloom} d="M262 44c-16-6-28 2-30 16 14 3 26-3 30-16Z" />
-      <g transform="translate(290 22)" style={bloom}>
-        {PETALS.map((angle) => (
-          <ellipse
-            key={angle}
-            pathLength={1}
-            cx={0}
-            cy={-8}
-            rx={4.5}
-            ry={8}
-            transform={`rotate(${angle})`}
-          />
-        ))}
-        <circle pathLength={1} r={2.6} />
-      </g>
+      <Flower x={290} y={22} style={bloom} />
     </svg>
   );
 }
