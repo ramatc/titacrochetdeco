@@ -8,10 +8,18 @@ import type { Photo } from "@/types/catalog";
 export type FeedPhoto = Photo & { postUrl?: string };
 
 export const feedPhotos: FeedPhoto[] = [
-  { alt: "Flor tejida sostenida en la mano" },
-  { alt: "Girasol sonriente tejido" },
   {
-    src: "/images/productos/ramo-tulipanes-y-lavandas-1.jpg",
+    src: "/images/productos/caballo-1.jpg",
+    alt: "Amigurumi de caballo marrón con crin de flecos y ojos grandes",
+    postUrl: "https://www.instagram.com/p/Cp59IHOu8tX/",
+  },
+  {
+    src: "/images/productos/pareja-personalizada-1.jpg",
+    alt: "Pareja de muñecos tejidos inspirados en Harry Potter, con túnicas negras y bufandas verde y azul",
+    postUrl: "https://www.instagram.com/p/DVraxmUkSXA/",
+  },
+  {
+    src: "/images/productos/ramo-personalizado-1.jpg",
     alt: "Ramo tejido con un tulipán rojo, un tulipán blanco y lavandas violetas, envuelto en tul",
     postUrl: "https://www.instagram.com/p/Cn5MIiJubbl/",
   },

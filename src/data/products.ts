@@ -318,26 +318,6 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    slug: "ramo-tulipanes-y-lavandas",
-    name: "Ramo Tulipanes y Lavandas",
-    category: "ramos-y-flores",
-    price: null,
-    images: [
-      {
-        src: "/images/productos/ramo-tulipanes-y-lavandas-1.jpg",
-        alt: "Ramo tejido con un tulipán rojo, un tulipán blanco y dos lavandas violetas, envuelto en tul blanco",
-      },
-      {
-        src: "/images/productos/ramo-tulipanes-y-lavandas-2.jpg",
-        alt: "Detalle de los tulipanes rojo y blanco tejidos con sus hojas verdes, entre lavandas violetas",
-      },
-    ],
-    description: "Dos tulipanes, uno rojo y uno blanco, acompañados de lavandas y envueltos en tul.",
-    colors: "Rojo, blanco, violeta y verde",
-    madeToOrder: true,
-    featured: false,
-  },
-  {
     slug: "girasol-con-shrek",
     name: "Girasol con Shrek",
     category: "ramos-y-flores",
@@ -543,6 +523,35 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "caballo",
+    name: "Caballo",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/caballo-1.jpg",
+        alt: "Amigurumi de caballo marrón con crin de flecos, ojos grandes y hocico redondo, de frente sobre tela blanca",
+      },
+      {
+        src: "/images/productos/caballo-2.jpg",
+        alt: "Caballo tejido marrón visto de costado, con riendas, montura y cola de flecos",
+      },
+      {
+        src: "/images/productos/caballo-3.jpg",
+        alt: "Caballo tejido marrón en tres cuartos, con riendas y montura",
+      },
+      {
+        src: "/images/productos/caballo-4.jpg",
+        alt: "Caballo tejido marrón visto de atrás, con la crin y la cola de flecos",
+      },
+    ],
+    description: "Un caballo grande y redondito, con crin y cola de flecos, riendas y montura.",
+    dimensions: "34 cm de alto aprox.",
+    colors: "Marrón",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "mascota-personalizada",
     name: "Mascota Personalizada",
     category: "personalizados",
@@ -574,6 +583,45 @@ export const products: Product[] = [
       "Una vaca tejida a pedido, con manchas, pestañas y detalles a elección.",
     dimensions: "20 cm de alto aprox.",
     colors: "Blanco, negro y marrón",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
+    slug: "ramo-personalizado",
+    name: "Ramo Personalizado",
+    category: "personalizados",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/ramo-personalizado-1.jpg",
+        alt: "Ramo tejido con un tulipán rojo, un tulipán blanco y dos lavandas violetas, envuelto en tul blanco",
+      },
+      {
+        src: "/images/productos/ramo-personalizado-2.jpg",
+        alt: "Detalle de los tulipanes rojo y blanco tejidos con sus hojas verdes, entre lavandas violetas",
+      },
+    ],
+    description:
+      "Un ramo armado a tu gusto: elegís las flores, los colores y el envoltorio. Este lleva tulipanes y lavandas en tul.",
+    colors: "A elección",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
+    slug: "pareja-personalizada",
+    name: "Pareja Personalizada",
+    category: "personalizados",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/pareja-personalizada-1.jpg",
+        alt: "Pareja de muñecos tejidos inspirados en Harry Potter, con túnicas negras y bufandas verde y azul, sobre tela blanca",
+      },
+    ],
+    description:
+      "Una pareja tejida a pedido, con su pelo y sus detalles. Esta lleva túnicas y bufandas inspiradas en Harry Potter.",
+    dimensions: "18 cm de alto aprox.",
+    colors: "A elección",
     madeToOrder: true,
     featured: false,
   },
