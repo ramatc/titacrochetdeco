@@ -19,7 +19,7 @@ export function CategoryNavigation() {
         />
       </div>
 
-      <ul className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-(--spacing-gutter) scroll-px-(--spacing-gutter) md:mx-auto md:mt-14 md:grid md:max-w-(--container-page) md:grid-cols-5 md:gap-6 md:overflow-visible md:px-10 xl:px-14">
+      <ul className="no-scrollbar relative mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-(--spacing-gutter) scroll-px-(--spacing-gutter) md:mx-auto md:mt-14 md:grid md:max-w-(--container-page) md:grid-cols-5 md:gap-6 md:overflow-visible md:px-10 xl:px-14">
         {categories.map((category, index) => (
           <Reveal
             as="li"
