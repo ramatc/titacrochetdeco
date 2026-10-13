@@ -58,8 +58,8 @@ export const customSection = {
   message:
     "¡Hola Tita! Quería consultar por una pieza personalizada. Mi idea es: ",
   photo: {
-    src: "/images/productos/vaca-personalizada-1.jpg",
-    alt: "Vaca personalizada tejida al crochet, blanca con manchas negras y cuernos marrones",
+    src: "/images/productos/coraline-1.jpg",
+    alt: "Amigurumi de Coraline con pelo azul, ojos de botón negros e impermeable amarillo con capucha, sostenido en la mano",
   } satisfies Photo,
 };
 

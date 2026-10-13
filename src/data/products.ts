@@ -285,18 +285,18 @@ export const products: Product[] = [
     featured: false,
   },
   {
-    slug: "ramo-girasoles-sonrientes",
-    name: "Ramo Girasoles Sonrientes",
+    slug: "ramo-shrek-y-fiona",
+    name: "Ramo Shrek y Fiona",
     category: "ramos-y-flores",
     price: null,
     images: [
       {
-        src: "/images/productos/ramo-girasoles-sonrientes-1.jpg",
-        alt: "Ramo grande con girasoles, girasoles con carita y rosas rojas tejidas, envuelto en papel kraft",
+        src: "/images/productos/ramo-shrek-y-fiona-1.jpg",
+        alt: "Ramo grande con girasoles tejidos, dos girasoles con las caritas de Shrek y Fiona y rosas rojas, envuelto en papel kraft",
       },
     ],
     description:
-      "Un ramo abundante que mezcla girasoles clásicos, girasoles con carita y rosas rojas.",
+      "Un ramo abundante de girasoles y rosas rojas, con Shrek y Fiona escondidos en el centro de dos girasoles.",
     colors: "Amarillo, marrón, verde y rojo",
     madeToOrder: true,
     featured: false,
@@ -470,6 +470,23 @@ export const products: Product[] = [
     description: "Chimuelo tejido en negro, con sus grandes ojos verdes y sus alas.",
     dimensions: "16 cm de alto aprox.",
     colors: "Negro y verde",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
+    slug: "coraline",
+    name: "Coraline",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/coraline-1.jpg",
+        alt: "Amigurumi de Coraline con pelo azul, ojos de botón negros e impermeable amarillo con capucha, sostenido en la mano",
+      },
+    ],
+    description: "Coraline tejida a mano, con sus ojos de botón y su impermeable amarillo.",
+    dimensions: "25 cm de alto aprox.",
+    colors: "Amarillo, azul y naranja",
     madeToOrder: true,
     featured: false,
   },
