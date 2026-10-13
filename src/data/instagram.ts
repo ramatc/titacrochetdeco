@@ -8,7 +8,10 @@ export const feedPhotos: Photo[] = [
   { alt: "Flor tejida sostenida en la mano" },
   { alt: "Girasol sonriente tejido" },
   { alt: "Ramo de rosas y girasol tejido" },
-  { alt: "Amigurumi de perrito con flores" },
+  {
+    src: "/images/productos/vaca-personalizada-1.jpg",
+    alt: "Vaca personalizada tejida al crochet, blanca con manchas negras y cuernos marrones",
+  },
   { alt: "Girasoles tejidos listos para entregar" },
   { alt: "Amigurumi de superhéroe" },
 ];
