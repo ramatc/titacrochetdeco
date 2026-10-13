@@ -491,6 +491,22 @@ export const products: Product[] = [
     featured: false,
   },
   {
+    slug: "furia",
+    name: "Furia",
+    category: "amigurumis",
+    price: null,
+    images: [
+      {
+        src: "/images/productos/furia-1.jpg",
+        alt: "Amigurumi de Furia de Intensamente, rojo con ceño fruncido, camisa blanca con corbata roja y pantalón marrón, sostenido en la mano",
+      },
+    ],
+    description: "Furia de Intensamente tejido a mano, con su ceño fruncido y su corbata.",
+    colors: "Rojo, blanco, marrón y negro",
+    madeToOrder: true,
+    featured: false,
+  },
+  {
     slug: "mascota-personalizada",
     name: "Mascota Personalizada",
     category: "personalizados",

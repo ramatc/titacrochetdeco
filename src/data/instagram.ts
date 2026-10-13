@@ -17,5 +17,9 @@ export const feedPhotos: FeedPhoto[] = [
     postUrl: "https://www.instagram.com/p/C95ZOX-vxiv/",
   },
   { alt: "Girasoles tejidos listos para entregar" },
-  { alt: "Amigurumi de superhéroe" },
+  {
+    src: "/images/productos/furia-1.jpg",
+    alt: "Amigurumi de Furia de Intensamente, rojo con ceño fruncido, camisa blanca y corbata roja",
+    postUrl: "https://www.instagram.com/p/C9an6mov5jG/",
+  },
 ];
