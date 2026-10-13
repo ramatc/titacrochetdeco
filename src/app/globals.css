@@ -142,6 +142,45 @@
 }
 
 /*
+ * Route loader. Fades in after a short delay so fast navigations don't flash it.
+ */
+.loader {
+  animation: loader-in 400ms var(--ease-soft) 250ms both;
+}
+
+.loader-ball {
+  transform-origin: 40px 40px;
+  animation: loader-spin 3.2s linear infinite;
+}
+
+.loader-thread {
+  stroke-dasharray: 80;
+  animation: loader-wind 1.6s var(--ease-soft) infinite alternate;
+}
+
+@keyframes loader-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-wind {
+  from {
+    stroke-dashoffset: 80;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*
  * Reveal on scroll. Content stays visible when JS is disabled or the user
  * prefers reduced motion; only then do we hide it before it enters view.
  */
