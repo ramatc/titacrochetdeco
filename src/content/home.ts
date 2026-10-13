@@ -37,8 +37,8 @@ export const editorial = {
     "Por eso cada una puede tener pequeños detalles que la hacen única: no salen de una máquina, salen de unas manos y de varias horas de trabajo.",
   ],
   photo: {
-    src: "/images/productos/girasol-sonriente-3.jpg",
-    alt: "Muchos girasoles sonrientes tejidos al crochet, embolsados con tarjeta y listos para entregar",
+    src: "/images/home/girasoles-y-margaritas.jpg",
+    alt: "Girasoles y margaritas tejidos al crochet, con tallos y hojas verdes, sobre una tela blanca",
   } satisfies Photo,
   secondaryPhoto: {
     src: "/images/productos/camaleon-pascal-2.jpg",

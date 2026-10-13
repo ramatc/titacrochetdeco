@@ -31,11 +31,16 @@ export function EditorialSection() {
             </div>
           </Reveal>
 
-          <Reveal delay={120} className="w-1/2 self-end sm:w-2/5">
+          {/* Portrait like the source photo; on desktop it overlaps the main
+              photo, framed in linen, to keep breaking the grid. */}
+          <Reveal
+            delay={120}
+            className="relative z-10 w-3/5 self-end sm:w-2/5 lg:-ml-28 lg:w-[62%] lg:self-start"
+          >
             <Photo
               photo={editorial.secondaryPhoto}
-              sizes="(min-width: 1024px) 16vw, 45vw"
-              className="aspect-square"
+              sizes="(min-width: 1024px) 22vw, 60vw"
+              className="aspect-[4/5] border-[0.625rem] border-linen"
             />
           </Reveal>
         </div>
