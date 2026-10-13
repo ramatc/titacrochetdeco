@@ -16,7 +16,8 @@ type ProductCardProps = {
 const frames = {
   portrait: "aspect-[4/5]",
   square: "aspect-square",
-  wide: "aspect-[4/3] md:aspect-[8/5]",
+  // From md up the row height comes from its portrait siblings (see subgrid below).
+  wide: "aspect-[4/3] md:aspect-auto md:h-full md:min-h-64",
 } as const;
 
 export function ProductCard({
@@ -34,8 +35,14 @@ export function ProductCard({
     : "(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw";
 
   return (
-    <li className={isWide ? "col-span-2" : undefined}>
-      <Link href={`/productos/${product.slug}`} className="group block">
+    // Photo and text sit on the parent grid's rows (subgrid) so photos and
+    // captions line up across cards with different frames. The zero row gap
+    // keeps the grid's row spacing from splitting a photo from its caption.
+    <li className={`md:row-span-2 md:grid md:grid-rows-subgrid md:gap-y-0 ${isWide ? "col-span-2" : ""}`}>
+      <Link
+        href={`/productos/${product.slug}`}
+        className="group block md:row-span-2 md:grid md:grid-rows-subgrid md:gap-y-0"
+      >
         <div className="relative">
           <Photo
             photo={product.images[0]}
